@@ -4,8 +4,7 @@ const nextConfig = {
   // distDir: '../../dist/functions/next'
   images: {
     domains: ['pbs.twimg.com'],
-    loader: 'custom',
-    path: 'https://pbs.twimg.com',
+    loader: (width, src, quality) => `/preprocessed-images/${filename}-${width}.jpg`
   },
 };
 
