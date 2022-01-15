@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { agencyTheme } from 'common/theme/agency';
+// import { agencyTheme } from 'common/theme/agency';
+import { theme } from 'common/theme/appCreative';
 import ResetCSS from 'common/assets/css/style';
 
 const Icons = () => {
   return (
-    <ThemeProvider theme={agencyTheme}>
+    <ThemeProvider theme={theme}>
       <Fragment>
         <ResetCSS />
         {/* End of agency head section */}

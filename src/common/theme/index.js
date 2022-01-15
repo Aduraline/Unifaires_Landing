@@ -1,7 +1,9 @@
 import { appTheme } from './app';
-import { agencyTheme } from './agency';
+// import { agencyheme } from './agency';
+import { theme } from './appCreative';
 
 export const theme = {
   appTheme,
-  agencyTheme,
+  // agencyTheme,
+  theme,
 };

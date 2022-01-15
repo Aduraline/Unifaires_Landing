@@ -27,7 +27,7 @@ export default function AppCreative() {
       <Fragment>
         <Head>
           <title>
-            UNIFAIRS| Future-proof learning with career opportunities
+            UNIFAIRES| Future-proof learning with career opportunities
           </title>
           <meta
             name="Description"
