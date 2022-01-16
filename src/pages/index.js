@@ -15,6 +15,7 @@ import PopularInstructurs from "components/LandingPage/PopularInstructurs";
 import TrustedBy from "components/LandingPage/TrustedBy";
 import ExploreSection from "components/LandingPage/ExploreSection";
 import Footer from "components/LandingPage/Footer";
+import { DrawerProvider } from "common/contexts/DrawerContext";
 import GlobalStyle, {
   AppWrapper,
   ContentWrapper,
@@ -55,7 +56,9 @@ export default function AppCreative() {
 
         {/* start app creative landing */}
         <AppWrapper>
-          <Navbar />
+          <DrawerProvider>
+            <Navbar />
+          </DrawerProvider>
           <ContentWrapper>
             <Banner />
             <KeyFeatures />

@@ -1,10 +1,16 @@
 import SearchModal from "components/Layout/SearchModal";
-import { useState } from "react";
+import React, { useContext, useState } from "react";
 import NextImage from "common/components/NextImage";
 import styled from "styled-components";
 import Link from "../../../utils/ActiveLink";
-
+import { DrawerContext } from "common/contexts/DrawerContext";
+import HamburgMenu from "common/components/HamburgMenu";
+import Drawer from "common/components/Drawer";
+import { androidClose } from "react-icons-kit/ionicons/androidClose";
+import ScrollSpyMenu from "common/components/ScrollSpyMenu";
+import { Icon } from "react-icons-kit";
 // Icons
+import { menuData } from "common/data/Interior";
 import lang from "../../../public/images/home-two/lang.svg";
 import globe from "../../../public/images/home-two/glob.svg";
 
@@ -19,6 +25,51 @@ const Logo = styled.h5`
   color: #ffffff !important;
 `;
 
+const Menu = styled(ScrollSpyMenu)`
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 16px;
+
+  li {
+    padding: 10px;
+  }
+  a {
+    color: #5832da;
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  a:hover {
+    cursor: pointer;
+    border-bottom: black 1px solid;
+  }
+`;
+
+const Hamburg = styled(HamburgMenu)`
+  span {
+    background-color: white;
+  }
+`;
+const MenuDrawer = styled(Drawer)`
+  button {
+    border-radius: 999px;
+    background-color: #5832da;
+    border: 0;
+    font-size: 10px;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+
+    &:hover {
+      background-color: white;
+      color: #5832da;
+      border: 1px solid #5832da;
+    }
+  }
+`;
 const ContainerStyle = styled.div`
   @media (max-width: 1300px) {
     display: none !important;
@@ -26,6 +77,7 @@ const ContainerStyle = styled.div`
 `;
 
 const NavbarTwo = () => {
+  const { state, dispatch } = useContext(DrawerContext);
   const [showMenu, setShowMenu] = useState(false);
   const [showSearchModal, setShowSearchModal] = useState(false);
   const [sticky, setSticky] = useState(false);
@@ -50,6 +102,12 @@ const NavbarTwo = () => {
     // browser code
     window.addEventListener("scroll", showStickyMenu);
   }
+
+  const toggleHandler = () => {
+    dispatch({
+      type: "TOGGLE",
+    });
+  };
   return (
     <>
       {/* For mobile devices */}
@@ -145,15 +203,28 @@ const NavbarTwo = () => {
                     </li>
                   </ul>
                 </div>
-                <div
-                  onClick={() => toggleMenu()}
-                  className="hamburger-menu hamburger-two"
-                >
-                  {showMenu ? (
-                    <i className="ri-close-line"></i>
-                  ) : (
-                    <i className="ri-menu-line"></i>
-                  )}
+                <div style={{ display: "flex", alignItems: "center" }}>
+                  <MenuDrawer
+                    width="420px"
+                    placement="right"
+                    drawerHandler={<Hamburg />}
+                    open={state.isOpen}
+                    toggleHandler={toggleHandler}
+                  >
+                    <button
+                      type="button"
+                      className={state.isOpen ? "active" : ""}
+                      onClick={toggleHandler}
+                      aria-label="drawer toggle button"
+                    >
+                      <Icon icon={androidClose} />
+                    </button>
+                    <Menu
+                      menuItems={menuData}
+                      drawerClose={true}
+                      offset={-100}
+                    />
+                  </MenuDrawer>
                 </div>
               </nav>
             </div>
