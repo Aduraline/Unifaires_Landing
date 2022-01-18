@@ -113,28 +113,7 @@ const NavbarTwo = () => {
       {/* For mobile devices */}
       <ContainerStyle>
         <div className={sticky ? "is-sticky navbar-area" : "navbar-area"}>
-          <div className="mobile-responsive-nav">
-            <div className="container-fluid">
-              <div className="mobile-responsive-menu">
-                <div
-                  onClick={() => toggleMenu()}
-                  className="hamburger-menu hamburger-two"
-                >
-                  {showMenu ? (
-                    <i className="ri-close-line"></i>
-                  ) : (
-                    <i className="ri-menu-line"></i>
-                  )}
-                </div>
-                <div className="logo">
-                  <Link href="/">
-                    <Logo>Unifaires</Logo>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
+      
           <div
             className={
               showMenu ? "show desktop-nav nav-area" : "desktop-nav nav-area"

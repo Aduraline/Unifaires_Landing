@@ -50,6 +50,11 @@ export const AppWrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+// FIXME: Remove me when the I'm fully responsive😆
+
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
 
   .sticky-active {
     .navbar {

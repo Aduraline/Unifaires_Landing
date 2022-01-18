@@ -296,9 +296,6 @@ Navbar Area
   background-color: #5832da;
   padding-top: 0;
   padding-bottom: 0;
-  @media (max-width: 1300px) {
-    display: none;
-  }
 }
 
 .desktop-nav .navbar {
@@ -1182,10 +1179,12 @@ Navbar Area
 
 .nav-widget-form .search-form {
   position: relative;
+  display: flex;
   margin: 0 auto;
   border-radius: 9999;
-  border: none;
-  width: 690px;
+
+  align-items: center;
+  width: 300px;
   height: 60px;
 }
 
@@ -1224,8 +1223,11 @@ Navbar Area
 
 .nav-widget-form .search-form button {
   position: absolute;
-  top: 0;
   right: 0;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 0;
   border-radius: 0;
   margin-top: 9px;
@@ -1237,7 +1239,7 @@ Navbar Area
 }
 
 .nav-widget-form .search-form button:hover {
-  background: var(--pinkColor);
+  background: #5832da !important;
 }
 
 .nav-widget-form.nav-widget-form-bg .form-control {
@@ -1250,7 +1252,7 @@ Navbar Area
 .nav-widget-form.nav-widget-form-bg .form-control:-ms-input-placeholder,
 .nav-widget-form.nav-widget-form-bg .form-control::-ms-input-placeholder,
 .nav-widget-form.nav-widget-form-bg .form-control::-webkit-input-placeholder {
-  color: var(--bodyColor);
+  color: white;
 }
 
 .nav-widget-form.nav-widget-form-bg .form-control::-webkit-input-placeholder,
