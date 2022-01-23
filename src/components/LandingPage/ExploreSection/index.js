@@ -5,6 +5,7 @@ import styled from "styled-components";
 import BoxIcon from "../../../public/images/boxicon.svg";
 import BrandIcons from "../../../public/images/brands.svg";
 import NextImage from "common/components/NextImage";
+import { Heading, HeadingText, Text } from "common/style";
 
 const ContainerStyle = styled.div`
   background: white;
@@ -23,57 +24,23 @@ const Flex = styled.div`
   padding-left: 20px;
   margin-top: 20px;
 `;
-const Icon = styled.img``;
-const Brands = styled.img``;
-const Heading = styled.p`
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  color: #000000;
-`;
-const HeadingText = styled.p`
-  display: flex;
-  align-items: center;
-  opacity: 0.9;
-  font-size: 45px;
-  line-height: 125%;
-  color: #c07654;
-  margin-bottom: 20px;
-`;
-const Text = styled.p`
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  color: #c07654;
-  opacity: 0.9;
-`;
 
 const TopWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
   margin-bottom: 40px;
   @media (max-width: 1200px) {
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
   }
   @media (max-width: 800px) {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 `;
 
-const BottomWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  @media (max-width: 1200px) {
-    gap: 20px;
-  }
-  @media (max-width: 800px) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-`;
+
 const Box = styled.div`
   min-width: 384px;
   min-height: 336px;
@@ -194,11 +161,6 @@ const ExploreSection = () => {
               </BoxText>
             </InnerWrapper>
           </Box>
-        </TopWrapper>
-      </Fade>
-
-      <Fade up delay={100}>
-        <BottomWrapper>
           <Box>
             <Flex>
               <NextImage src={BoxIcon} alt="image" />
@@ -250,8 +212,11 @@ const ExploreSection = () => {
               </BoxText>
             </InnerWrapper>
           </Box>
-        </BottomWrapper>
+        </TopWrapper>
       </Fade>
+
+     
+           
     </ContainerStyle>
   );
 };

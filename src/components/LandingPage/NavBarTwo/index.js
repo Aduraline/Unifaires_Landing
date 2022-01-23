@@ -67,7 +67,7 @@ const Hamburg = styled(HamburgMenu)`
     background-color: white;
   }`
 
-  
+
 const MenuDrawer = styled(Drawer)`
   button {
      
@@ -136,9 +136,9 @@ const NavBar = () => {
   const handleSearchModal = () => {
     openModal({
       config: {
-        className: "search-modal",
+        className:"search-modal",
         disableDragging: true,
-        width: "100%",
+        width: "90%",
         height: "100%",
         animationFrom: { transform: "translateY(100px)" },
         animationTo: { transform: "translateY(0)" }, //
@@ -151,7 +151,7 @@ const NavBar = () => {
       component: SearchPanel,
       componentProps: {},
       closeComponent: CloseModalButtonAlt,
-      closeOnClickOutside: false,
+      closeOnClickOutside: true,
     });
   };
   const toggleHandler = () => {
@@ -212,8 +212,9 @@ const NavBar = () => {
                   type="search"
                   className="form-control"
                   placeholder="Search for anything "
+                  onClick={handleSearchModal}
                 />
-                <button type="submit">
+                <button type="button" onClick={handleSearchModal}  >
                   <i className="ri-search-line"></i>
                 </button>
               </form>

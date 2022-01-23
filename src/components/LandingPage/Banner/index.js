@@ -33,6 +33,14 @@ const Button = styled.button`
   }
 `;
 
+const Heading = styled.h1`
+@media screen and (max-width: 480px) {
+  font-size: 32px;
+  padding: 20px;
+  
+}
+`
+
 const Banner = () => {
   return (
     <div className="banner-area-two">
@@ -42,10 +50,10 @@ const Banner = () => {
             <div className="banner-content-two">
               <FlexContainer>
                 <Fade up delay={100}>
-                  <h1>
+                  <Heading>
                     Find affordable <ColoredText>Learning</ColoredText>{" "}
                     Resources
-                  </h1>
+                    </Heading>
                 </Fade>
                 <div className="banner-btn">
                   <Fade left delay={200}>

@@ -1,3 +1,5 @@
+
+import { HeadingText, Text, Heading } from "common/style";
 import React from "react";
 import styled from "styled-components";
 
@@ -12,28 +14,6 @@ const FlexContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-`;
-
-const Heading = styled.p`
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  color: #000000;
-`;
-const HeadingText = styled.p`
-  display: flex;
-  align-items: center;
-  opacity: 0.9;
-  font-size: 45px;
-  line-height: 125%;
-  color: #c07654;
-`;
-const Text = styled.p`
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  color: #c07654;
-  opacity: 0.9;
 `;
 
 const TopWrapper = styled.div`

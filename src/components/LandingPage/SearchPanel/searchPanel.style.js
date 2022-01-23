@@ -1,16 +1,13 @@
 import styled from 'styled-components';
 
 const SearchPanelWrapper = styled.div`
-  max-width: 600px;
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
-  display: flex;
-  align-items: center;
-  background: rgba(88, 50, 218, 0.05);
 
-  justify-content: center;
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0px 15px;
+  background: #FFFFFF;
+  border-radius: 48px;
   .reusecore__input {
     .field-wrapper {
       input {

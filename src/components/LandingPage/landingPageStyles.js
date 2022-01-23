@@ -9,7 +9,8 @@ const GlobalStyle = createGlobalStyle`
   .reuseModalOverlay {
     z-index: 99999;
     .reuseModalHolder{
-      border: 0;
+      background-color: transparent;
+      border: none;;
     }
   } 
   h1,
@@ -55,6 +56,7 @@ export const AppWrapper = styled.div`
   @media screen and (max-width: 1000px) {
     display: none;
   }
+
 
   .sticky-active {
     .navbar {
@@ -140,5 +142,7 @@ export const SectionHeader = styled.header`
     }
   }
 `;
+
+
 
 export default GlobalStyle;

@@ -12,33 +12,21 @@ const ContainerStyle = styled.div`
 `;
 
 const FlexContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
   @media (max-width: 1200px) {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   @media (max-width: 480px) {
-    display: none;
+   
   }
 `;
 const InnerLeftWapper = styled.div`
   display: flex;
   align-content: center;
   flex-direction: column;
-`;
-const InnerCenterWapper = styled.div`
-  display: flex;
-  align-content: space-between;
-  min-height: 230px;
-  gap: 80px;
-  margin-right: -10px;
-  flex-direction: column;
-  @media (max-width: 1200px) {
-    display: none;
-  }
 `;
 const InnerRightWapper = styled.div`
   display: flex;
@@ -52,6 +40,10 @@ const Heading = styled.p`
   align-items: center;
   color: #000000;
   opacity: 0.9;
+  @media screen and (max-width: 480px) {
+    margin-top: 10px;
+    font-size: 24px;
+  }
 `;
 const HeadingText = styled.p`
   font-size: 22px;
@@ -89,6 +81,7 @@ const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  
 `;
 const SecondaryButton = styled(Button)`
   background: white;
@@ -107,6 +100,10 @@ const ButtonWrapper = styled.div`
   padding-right: 50px;
   gap: 30px;
   margin-top: 20px;
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
+
 `;
 const CourseWrapper = styled.div`
   display: flex;
@@ -115,14 +112,33 @@ const CourseWrapper = styled.div`
 `;
 const HeaderWrapper = styled.div`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
+  margin-left: -50px;
+  @media (max-width: 1200px) {
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 const TopWrapper = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  margin-bottom: 30px;
+  @media screen and (max-width: 768px) {
+    background: #ffffff;
+    box-shadow: 0px 10px 40px -5px rgba(74, 42, 185, 0.12) !important;
+    border-radius: 12px;
+    padding: 20px;
+  }
 `;
+
+const BottomWrapper = styled(TopWrapper)``;
+
 const CourseSection = () => {
   return (
     <ContainerStyle>
@@ -152,19 +168,18 @@ const CourseSection = () => {
             </SecondaryButton>
           </ButtonWrapper>
         </InnerLeftWapper>
-        <InnerCenterWapper>
+        {/* <InnerCenterWapper>
           <NextImage src={FindIcon} alt="Find Icon" />
           <NextImage src={MatchIcon} alt="Match Icon" />
-        </InnerCenterWapper>
+        </InnerCenterWapper> */}
         {/* right */}
         <InnerRightWapper>
-          <HeaderWrapper>
-            {/* <Icon>
-              <i class="ri-search-line"></i>
-            </Icon> */}
-            <HeadingText>Find suitable learning courses</HeadingText>
-          </HeaderWrapper>
           <TopWrapper>
+            <HeaderWrapper>
+              <NextImage src={FindIcon} width={40} alt="Find Icon" />
+              <HeadingText>Find suitable learning courses</HeadingText>
+            </HeaderWrapper>
+
             <Text>
               We’ll never tell your current company or a third-party recruiter
               about your job search, we respect your privacy. And it’s
@@ -174,11 +189,10 @@ const CourseSection = () => {
               View all courses <i class="ri-arrow-right-s-line"></i>
             </ViewallLink>
           </TopWrapper>
-          <>
+
+          <BottomWrapper>
             <HeaderWrapper>
-              {/* <Icon>
-                <i class="ri-qr-scan-line"></i>
-              </Icon> */}
+              <NextImage src={MatchIcon} width={40} alt="Match Icon" />
               <HeadingText>Match skills with our advanced AI </HeadingText>
             </HeaderWrapper>
             <Text>
@@ -189,7 +203,7 @@ const CourseSection = () => {
             <ViewallLink>
               View all courses <i class="ri-arrow-right-s-line"></i>
             </ViewallLink>
-          </>
+          </BottomWrapper>
         </InnerRightWapper>
       </FlexContainer>
     </ContainerStyle>

@@ -10,6 +10,7 @@ import CardOne from "../../../public/images/cardone.svg";
 import Adoption from "../../../public/images/adoptionImage.svg";
 import CardTwo from "../../../public/images/cardtwo.svg";
 import CardThree from "../../../public/images/cardthree.svg";
+import { Heading, HeadingText, Text } from "common/style";
 
 const options = {
   loop: true,
@@ -52,42 +53,24 @@ const FlexContainer = styled.div`
   justify-content: space-between;
 `;
 const Flex = styled.div`
-  display: flex;
+@media screen and (max-width: 768px) {
+    width: 384px;
+  }
 `;
-const Icon = styled.img`
-  min-width: 384px;
-`;
-const Brands = styled.img``;
-const Heading = styled.p`
-  font-size: 20px;
+const FlexBox = styled.div`
   display: flex;
   align-items: center;
-  color: #000000;
-`;
-const HeadingText = styled.p`
-  opacity: 0.9;
-  font-size: 45px;
-  color: #c07654;
-`;
-const Text = styled.p`
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  color: #c07654;
-  opacity: 0.9;
+  justify-content: center;
+
 `;
 
-const TopWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 24px;
-  margin-top: 50px;
-`;
 
 const Box = styled.div`
   min-width: 370px;
   min-height: 336px;
+  @media screen and (max-width: 768px) {
+    width: 384px;
+  }
   background: linear-gradient(
       0deg,
       rgba(255, 255, 255, 0.75),
@@ -147,13 +130,7 @@ const BoxHeader = styled.p`
   align-items: center;
   color: rgba(88, 50, 218, 1);
 `;
-const BoxSubheader = styled(BoxHeader)`
-  color: #b8bcca;
-  opacity: 0.5;
-`;
-const SpanStyle = styled(BoxHeader)`
-  color: #12355b;
-`;
+
 const BoxText = styled.p`
   font-size: 16px;
   line-height: 150%;
@@ -228,6 +205,7 @@ const DiverseSection = () => {
       <div className="trending-slider   pt-45">
         {display ? (
           <OwlCarousel {...options}>
+            <FlexBox>
             <Box>
               <Flex>
                 <NextImage src={CardOne} alt="image" />
@@ -251,7 +229,9 @@ const DiverseSection = () => {
                 </Button>
               </BottomWrapper>
             </Box>
+            </FlexBox>
 
+            <FlexBox>
             <BoxTwo>
               <Flex>
                 <NextImage src={CardTwo} alt="image" />
@@ -275,7 +255,9 @@ const DiverseSection = () => {
                 </Button>
               </BottomWrapper>
             </BoxTwo>
+            </FlexBox>
 
+            <FlexBox>
             <BoxThree>
               <Flex>
                 <NextImage src={CardThree} alt="image" />
@@ -299,6 +281,9 @@ const DiverseSection = () => {
                 </Button>
               </BottomWrapper>
             </BoxThree>
+            </FlexBox>
+
+            <FlexBox>
             <BoxThree>
               <Flex>
                 <NextImage src={CardThree} alt="image" />
@@ -322,6 +307,7 @@ const DiverseSection = () => {
                 </Button>
               </BottomWrapper>
             </BoxThree>
+            </FlexBox>
           </OwlCarousel>
         ) : (
           ""

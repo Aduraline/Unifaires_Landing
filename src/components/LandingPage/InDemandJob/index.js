@@ -9,6 +9,7 @@ import jobOne from "../../../public/images/job1.svg";
 import jobTwo from "../../../public/images/job2.svg";
 import jobThree from "../../../public/images/cardthree.svg";
 import adoptionImage from "../../../public/images/adoptionImage.svg";
+import { Heading, HeadingText, Text } from "common/style";
 
 const options = {
   loop: true,
@@ -30,8 +31,9 @@ const options = {
     576: {
       items: 1,
     },
+    
     800: {
-      items: 1,
+      items: 2,
     },
     1000: {
       items: 2,
@@ -51,43 +53,23 @@ const FlexContainer = styled.div`
   justify-content: space-between;
 `;
 const Flex = styled.div`
-  display: flex;
+  @media screen and (max-width: 768px) {
+    width: 384px;
+  }
 `;
-const Icon = styled.img`
-  min-width: 384px;
-`;
-const Heading = styled.p`
-  font-size: 20px;
+const FlexBox = styled.div`
   display: flex;
   align-items: center;
-  color: #000000;
-`;
-const HeadingText = styled.p`
-  display: flex;
-  align-items: center;
-  opacity: 0.9;
-  font-size: 45px;
-  line-height: 125%;
-  color: #c07654;
-`;
-const Text = styled.p`
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 150%;
-  color: #808080;
-`;
+  justify-content: center;
 
-const TopWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 24px;
-  margin-top: 50px;
 `;
 
 const Box = styled.div`
   min-width: 384px;
   min-height: 336px;
+  @media screen and (max-width: 768px) {
+    width: 384px;
+  }
   background: linear-gradient(
       0deg,
       rgba(255, 255, 255, 0.75),
@@ -203,6 +185,7 @@ const ChooseUs = () => {
       <div className="trending-slider   pt-45">
         {display ? (
           <OwlCarousel {...options}>
+            <FlexBox>
             <Box>
               <Flex>
                 <NextImage src={jobOne} alt="image" />
@@ -226,6 +209,8 @@ const ChooseUs = () => {
                 </Button>
               </BottomWrapper>
             </Box>
+            </FlexBox>
+            <FlexBox>
             <BoxTwo>
               <Flex>
                 <NextImage src={jobTwo} alt="image" />
@@ -250,6 +235,8 @@ const ChooseUs = () => {
                 </Button>
               </BottomWrapper>
             </BoxTwo>
+            </FlexBox>
+            <FlexBox>
             <BoxThree>
               <Flex>
                 <NextImage src={jobThree} alt="image" />
@@ -273,6 +260,8 @@ const ChooseUs = () => {
                 </Button>
               </BottomWrapper>
             </BoxThree>
+            </FlexBox>
+            <FlexBox>
             <BoxThree>
               <Flex>
                 <NextImage src={jobThree} alt="image" />
@@ -296,6 +285,7 @@ const ChooseUs = () => {
                 </Button>
               </BottomWrapper>
             </BoxThree>
+            </FlexBox>
           </OwlCarousel>
         ) : (
           ""

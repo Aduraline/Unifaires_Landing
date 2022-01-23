@@ -24,6 +24,11 @@ const Text = styled.p`
   @media (max-width: 1200px) {
     font-size: 14px;
   }
+  @media (max-width: 768px) {
+    align-items: center;
+    text-align: center !important;
+  
+  }
 `;
 
 const Button = styled.button`
@@ -46,15 +51,15 @@ const ContainerStyle = styled.div`
 `;
 
 const FlexContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 50px;
-  @media (max-width: 1024px) {
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+   
   }
   @media (max-width: 480px) {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 `;
 const InnerWrapper = styled.div`
@@ -62,9 +67,16 @@ const InnerWrapper = styled.div`
   align-items: flex-start;
   flex-direction: column;
   gap: 10px;
+  @media (max-width: 768px) {
+    align-items: center;
+    text-align: center !important;
+  
+  }
 `;
 const Icon = styled(image)`
-  width: 10px !important;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 const KeyFeatures = () => {
   return (

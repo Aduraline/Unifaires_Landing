@@ -7,6 +7,7 @@ import Instructor from "../../../public/images/instructor.svg";
 import Ratings from "../../../public/images/ratings.svg";
 import OnlineSvg from "../../../public/images/OnlineSvg.svg";
 import Adoption from "../../../public/images/adoptionImage.svg";
+import { Heading, HeadingText, Text } from "common/style";
 
 const ContainerStyle = styled.div`
   background: white;
@@ -22,28 +23,6 @@ const Flex = styled.div`
   justify-content: space-around;
   margin-top: -100px;
 `;
-const Heading = styled.p`
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  color: #000000;
-`;
-const HeadingText = styled.p`
-  display: flex;
-  align-items: center;
-  opacity: 0.9;
-  font-size: 45px;
-  line-height: 125%;
-  color: #c07654;
-`;
-const Text = styled.p`
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  color: #c07654;
-  opacity: 0.9;
-`;
-
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
