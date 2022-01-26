@@ -18,14 +18,13 @@ import HamburgMenu from "common/components/HamburgMenu";
 import Drawer from "common/components/Drawer";
 import { androidClose } from "react-icons-kit/ionicons/androidClose";
 import ScrollSpyMenu from "common/components/ScrollSpyMenu";
-import { Icon } from "react-icons-kit"
-
+import { Icon } from "react-icons-kit";
 import SearchPanel from "../SearchPanel";
+import ServicesModal from "../ServicesModal";
 import { openModal, closeModal } from "@redq/reuse-modal";
 import { menuData } from "common/data/Interior";
 import lang from "../../../public/images/home-two/lang.svg";
 import globe from "../../../public/images/home-two/glob.svg";
-
 
 const Menu = styled(ScrollSpyMenu)`
   padding: 10px;
@@ -48,9 +47,8 @@ const Menu = styled(ScrollSpyMenu)`
   }
 `;
 const Hamburg = styled(HamburgMenu)`
- display: none;
+  display: none;
   color: #fff;
-
 
   @media screen and (max-width: 1000px) {
     margin-top: 10px;
@@ -65,12 +63,11 @@ const Hamburg = styled(HamburgMenu)`
   }
   span {
     background-color: white;
-  }`
-
+  }
+`;
 
 const MenuDrawer = styled(Drawer)`
   button {
-     
     border-radius: 999px;
     background-color: #5832da;
     border: 0;
@@ -90,33 +87,30 @@ const MenuDrawer = styled(Drawer)`
 `;
 
 const SearchButton = styled(Button)`
+  @media screen and (min-width: 1000px) {
+    display: none;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 1;
+  background: rgba(255, 255, 255, 0.2);
 
-@media screen and (min-width: 1000px) {
-    display: none;   
-}
-display: flex;
-align-items: center;
-justify-content: center;
-order: 1;
-background: rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  border: none;
+  color: white;
+  padding: 10px; ;
+`;
 
-border-radius: 9999px;
-border: none;
-color: white;
-padding: 10px;;
-`
+const CloseModalButtonAlt = () => (
+  <Button
+    className="modalCloseBtn alt"
+    variant="fab"
+    onClick={() => closeModal()}
+    icon={<i className="flaticon-plus-symbol" />}
+  />
+);
 
-
-  
-  const CloseModalButtonAlt = () => (
-    <Button
-      className="modalCloseBtn alt"
-      variant="fab"
-      onClick={() => closeModal()}
-      icon={<i className="flaticon-plus-symbol" />}
-    />
-  );
-  
 const NavBar = () => {
   const [sticky, setSticky] = useState(false);
   const { state, dispatch } = useContext(DrawerContext);
@@ -136,7 +130,7 @@ const NavBar = () => {
   const handleSearchModal = () => {
     openModal({
       config: {
-        className:"search-modal",
+        className: "search-modal",
         disableDragging: true,
         width: "90%",
         height: "100%",
@@ -149,6 +143,28 @@ const NavBar = () => {
         },
       },
       component: SearchPanel,
+      componentProps: {},
+      closeComponent: CloseModalButtonAlt,
+      closeOnClickOutside: true,
+    });
+  };
+
+  const handleServicesModal = () => {
+    openModal({
+      config: {
+        className: "search-modal",
+        disableDragging: true,
+        width: "90%",
+        height: "100%",
+        animationFrom: { transform: "translateY(100px)" },
+        animationTo: { transform: "translateY(0)" }, //
+        transition: {
+          mass: 1,
+          tension: 180,
+          friction: 26,
+        },
+      },
+      component: ServicesModal,
       componentProps: {},
       closeComponent: CloseModalButtonAlt,
       closeOnClickOutside: true,
@@ -167,43 +183,38 @@ const NavBar = () => {
             <Logo>Unifaires</Logo>
           </NavLink>
 
-     <div>
-          <SearchButton
-            variant="textButton"
-            onClick={handleSearchModal}
-            icon={<i className="flaticon-magnifying-glass" />}
-            aria-label="search button"
-          />
+          <div>
+            <SearchButton
+              variant="textButton"
+              onClick={handleSearchModal}
+              icon={<i className="flaticon-magnifying-glass" />}
+              aria-label="search button"
+            />
           </div>
-         
-          <div style={{ display: "flex", alignItems:"center"}}>
-         
-                  <MenuDrawer
-                    width="250px"
-                    placement="right"
-                    drawerHandler={<Hamburg />}
-                    open={state.isOpen}
-                    toggleHandler={toggleHandler}
-                  >
-                    <button
-                      type="button"
-                      className={state.isOpen ? "active" : ""}
-                      onClick={toggleHandler}
-                      aria-label="drawer toggle button"
-                    >
-                      <Icon icon={androidClose} />
-                    </button>
-                    
-                    <Menu
-                      menuItems={menuData}
-                      drawerClose={true}
-                      offset={-100}
-                    />
-                  </MenuDrawer>
-                </div>
+
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <MenuDrawer
+              width="250px"
+              placement="right"
+              drawerHandler={<Hamburg />}
+              open={state.isOpen}
+              toggleHandler={toggleHandler}
+            >
+              <button
+                type="button"
+                className={state.isOpen ? "active" : ""}
+                onClick={toggleHandler}
+                aria-label="drawer toggle button"
+              >
+                <Icon icon={androidClose} />
+              </button>
+
+              <Menu menuItems={menuData} drawerClose={true} offset={-100} />
+            </MenuDrawer>
+          </div>
           <NavMenu>
             <NavLink to="/about" activeStyle>
-              Services
+              <button onClick={handleServicesModal}>Services</button>
             </NavLink>
             {/* // SEARCH component FIXME: Change this to pure Styled components. */}
             <div className="nav-widget-form nav-widget-form-bg ">
@@ -212,9 +223,9 @@ const NavBar = () => {
                   type="search"
                   className="form-control"
                   placeholder="Search for anything "
-                  onClick={handleSearchModal}
+                  // onClick={handleSearchModal}
                 />
-                <button type="button" onClick={handleSearchModal}  >
+                <button type="button">
                   <i className="ri-search-line"></i>
                 </button>
               </form>
@@ -247,6 +258,8 @@ const NavBar = () => {
             <NavBtnLink to="/signin">Sign In</NavBtnLink>
           </NavBtn>
         </Nav>
+
+        <div></div>
       </div>
     </>
   );

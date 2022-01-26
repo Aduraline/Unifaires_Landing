@@ -102,6 +102,12 @@ const MainSection = styled.div`
   }
 `;
 const CertStyles = styled.button`
+-webkit-transition: 0.5s;
+  &:hover {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
   border: none;
   cursor: pointer;
   width: 250px;

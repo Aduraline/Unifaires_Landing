@@ -3,7 +3,6 @@ import Head from "next/head";
 import { ThemeProvider } from "styled-components";
 import { theme } from "common/theme/appCreative";
 import ResetCSS from "common/assets/css/style";
-import Navbar from "components/LandingPage/Navbar";
 import Banner from "components/LandingPage/Banner";
 import KeyFeatures from "components/LandingPage/KeyFeatures";
 import CourseSection from "components/LandingPage/CourseSection";

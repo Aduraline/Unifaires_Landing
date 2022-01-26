@@ -31,7 +31,7 @@ const options = {
     576: {
       items: 1,
     },
-    
+
     800: {
       items: 2,
     },
@@ -61,7 +61,6 @@ const FlexBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
 `;
 
 const Box = styled.div`
@@ -124,6 +123,14 @@ const LeftInnerWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  p {
+    font-size: 16px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    color: #12355b;
+    font-weight: 400;
+  }
 `;
 const BoxHeader = styled.p`
   font-weight: bold;
@@ -159,7 +166,7 @@ const Button = styled.button`
   align-items: center;
   justify-content: space-around;
 `;
-const Image = styled.img``;
+
 const ChooseUs = () => {
   const [display, setDisplay] = useState(false);
   const [isMounted, setisMounted] = useState(false);
@@ -186,105 +193,105 @@ const ChooseUs = () => {
         {display ? (
           <OwlCarousel {...options}>
             <FlexBox>
-            <Box>
-              <Flex>
-                <NextImage src={jobOne} alt="image" />
-              </Flex>
-              <InnerWrapper>
-                <BoxButton>Meta</BoxButton>
-                <BoxHeader> Philosophy and Theology</BoxHeader>
-                <BoxText>
-                  Philosophy and Theology brings together some of the most
-                  important approaches to understanding and assessing the
-                  intellectual claims of religion.
-                </BoxText>
-              </InnerWrapper>
-              <BottomWrapper>
-                <LeftInnerWrapper>
-                  <Text>40 Applicants</Text>
-                  <NextImage src={adoptionImage} alt="image" />
-                </LeftInnerWrapper>
-                <Button className="default-btn">
-                  Apply Now <i class="ri-arrow-right-s-line"></i>
-                </Button>
-              </BottomWrapper>
-            </Box>
+              <Box>
+                <Flex>
+                  <NextImage src={jobOne} alt="image" />
+                </Flex>
+                <InnerWrapper>
+                  <BoxButton>Meta</BoxButton>
+                  <BoxHeader> Philosophy and Theology</BoxHeader>
+                  <BoxText>
+                    Philosophy and Theology brings together some of the most
+                    important approaches to understanding and assessing the
+                    intellectual claims of religion.
+                  </BoxText>
+                </InnerWrapper>
+                <BottomWrapper>
+                  <LeftInnerWrapper>
+                    <Text>40 Applicants</Text>
+                    <NextImage src={adoptionImage} alt="image" />
+                  </LeftInnerWrapper>
+                  <Button className="default-btn">
+                    Apply Now <i class="ri-arrow-right-s-line"></i>
+                  </Button>
+                </BottomWrapper>
+              </Box>
             </FlexBox>
             <FlexBox>
-            <BoxTwo>
-              <Flex>
-                <NextImage src={jobTwo} alt="image" />
-              </Flex>
-              <InnerWrapper>
-                <BoxButton>Google</BoxButton>
-                <BoxHeader>Data Science for IoT</BoxHeader>
+              <BoxTwo>
+                <Flex>
+                  <NextImage src={jobTwo} alt="image" />
+                </Flex>
+                <InnerWrapper>
+                  <BoxButton>Google</BoxButton>
+                  <BoxHeader>Data Science for IoT</BoxHeader>
 
-                <BoxText>
-                  Philosophy and Theology brings together some of the most
-                  important approaches to understanding and assessing the
-                  intellectual claims of religion.
-                </BoxText>
-              </InnerWrapper>
-              <BottomWrapper>
-                <LeftInnerWrapper>
-                  <Text>40 Applicants</Text>
-                  <NextImage src={adoptionImage} alt="image" />
-                </LeftInnerWrapper>
-                <Button className="default-btn">
-                  Apply Now <i class="ri-arrow-right-s-line"></i>
-                </Button>
-              </BottomWrapper>
-            </BoxTwo>
+                  <BoxText>
+                    Philosophy and Theology brings together some of the most
+                    important approaches to understanding and assessing the
+                    intellectual claims of religion.
+                  </BoxText>
+                </InnerWrapper>
+                <BottomWrapper>
+                  <LeftInnerWrapper>
+                    <p>40 Applicants</p>
+                    <NextImage src={adoptionImage} alt="image" />
+                  </LeftInnerWrapper>
+                  <Button className="default-btn">
+                    Apply Now <i class="ri-arrow-right-s-line"></i>
+                  </Button>
+                </BottomWrapper>
+              </BoxTwo>
             </FlexBox>
             <FlexBox>
-            <BoxThree>
-              <Flex>
-                <NextImage src={jobThree} alt="image" />
-              </Flex>
-              <InnerWrapper>
-                <BoxButton>IBM</BoxButton>
-                <BoxHeader> Anthropology in the 21st Century</BoxHeader>
-                <BoxText>
-                  Examine human-environmental relationships from the
-                  anthropological perspective considering theoretical approaches
-                  and practical applications will be supplemented.
-                </BoxText>
-              </InnerWrapper>
-              <BottomWrapper>
-                <LeftInnerWrapper>
-                  <Text>40 Applicants</Text>
-                  <NextImage src={adoptionImage} alt="image" />
-                </LeftInnerWrapper>
-                <Button className="default-btn">
-                  Apply Now <i class="ri-arrow-right-s-line"></i>
-                </Button>
-              </BottomWrapper>
-            </BoxThree>
+              <BoxThree>
+                <Flex>
+                  <NextImage src={jobThree} alt="image" />
+                </Flex>
+                <InnerWrapper>
+                  <BoxButton>IBM</BoxButton>
+                  <BoxHeader> Anthropology in the 21st Century</BoxHeader>
+                  <BoxText>
+                    Examine human-environmental relationships from the
+                    anthropological perspective considering theoretical
+                    approaches and practical applications will be supplemented.
+                  </BoxText>
+                </InnerWrapper>
+                <BottomWrapper>
+                  <LeftInnerWrapper>
+                    <p>40 Applicants</p>
+                    <NextImage src={adoptionImage} alt="image" />
+                  </LeftInnerWrapper>
+                  <Button className="default-btn">
+                    Apply Now <i class="ri-arrow-right-s-line"></i>
+                  </Button>
+                </BottomWrapper>
+              </BoxThree>
             </FlexBox>
             <FlexBox>
-            <BoxThree>
-              <Flex>
-                <NextImage src={jobThree} alt="image" />
-              </Flex>
-              <InnerWrapper>
-                <BoxButton>IBM</BoxButton>
-                <BoxHeader> Anthropology in the 21st Century</BoxHeader>
-                <BoxText>
-                  Examine human-environmental relationships from the
-                  anthropological perspective considering theoretical approaches
-                  and practical applications will be supplemented.
-                </BoxText>
-              </InnerWrapper>
-              <BottomWrapper>
-                <LeftInnerWrapper>
-                  <Text>40 Applicants</Text>
-                  <NextImage src={adoptionImage} alt="image" />
-                </LeftInnerWrapper>
-                <Button className="default-btn">
-                  Apply Now <i class="ri-arrow-right-s-line"></i>
-                </Button>
-              </BottomWrapper>
-            </BoxThree>
+              <BoxThree>
+                <Flex>
+                  <NextImage src={jobThree} alt="image" />
+                </Flex>
+                <InnerWrapper>
+                  <BoxButton>IBM</BoxButton>
+                  <BoxHeader> Anthropology in the 21st Century</BoxHeader>
+                  <BoxText>
+                    Examine human-environmental relationships from the
+                    anthropological perspective considering theoretical
+                    approaches and practical applications will be supplemented.
+                  </BoxText>
+                </InnerWrapper>
+                <BottomWrapper>
+                  <LeftInnerWrapper>
+                    <p>40 Applicants</p>
+                    <NextImage src={adoptionImage} alt="image" />
+                  </LeftInnerWrapper>
+                  <Button className="default-btn">
+                    Apply Now <i class="ri-arrow-right-s-line"></i>
+                  </Button>
+                </BottomWrapper>
+              </BoxThree>
             </FlexBox>
           </OwlCarousel>
         ) : (

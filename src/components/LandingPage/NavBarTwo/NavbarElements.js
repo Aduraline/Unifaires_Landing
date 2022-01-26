@@ -11,9 +11,9 @@ export const Nav = styled.nav`
   padding: 0.5rem calc((100vw - 1400px) / 2);
   z-index: 10;
 
-@media screen and (max-width: 768px) {
-  display: none;
-}
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
   /* Third Nav */
   /* justify-content: flex-start; */
 `;
@@ -24,14 +24,26 @@ export const NavLink = styled.h6`
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
+  -webkit-transition: 0.5s;
   height: 100%;
+  button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    -webkit-transition: 0.5s;
+    &:hover {
+      -webkit-transform: translateX(-5px);
+      transform: translateX(-5px);
+    }
+  }
   @media (max-width: 1024px) {
-   font-size: 14px;
+    font-size: 14px;
   }
   cursor: pointer;
 
   &.active {
-    color: #15cdfc;
+    color: red;
   }
 `;
 export const Logo = styled.h1`
@@ -62,9 +74,9 @@ export const NavMenu = styled.div`
   display: flex;
   align-items: center;
   margin-right: -24px;
- justify-content: space-between;
+  justify-content: space-between;
 
- height: 80px;
+  height: 80px;
   @media screen and (max-width: 1000px) {
     display: none;
   }
@@ -117,11 +129,8 @@ export const NavBtnLinkSecondary = styled(NavBtnLink)`
   border: 1px solid #1c1d1f;
   &:hover {
     transition: all 0.2s ease-in-out;
- border: 1px solid #fff;
-color: white;
- background: transparent;
-  
+    border: 1px solid #fff;
+    color: white;
+    background: transparent;
   }
 `;
-
-
