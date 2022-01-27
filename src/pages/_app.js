@@ -5,6 +5,7 @@ import "../public/fonts/remixicon.css";
 import "../public/css/bootstrap.min.css";
 import "../public/css/style.css";
 import "../public/css/responsive.css";
+import "antd/dist/antd.css";
 
 import "common/assets/css/icon-example-page.css";
 // swiper bundle styles

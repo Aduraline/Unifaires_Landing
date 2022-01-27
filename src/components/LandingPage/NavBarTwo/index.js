@@ -1,6 +1,11 @@
 import NextImage from "common/components/NextImage";
 import React, { useState, useContext } from "react";
 import {
+  UncontrolledButtonDropdown as UIBtn,
+  DropdownMenu as UIMenu,
+  DropdownToggle as UIDrop,
+} from "reactstrap";
+import {
   Nav,
   NavLink,
   Bars,
@@ -20,12 +25,46 @@ import { androidClose } from "react-icons-kit/ionicons/androidClose";
 import ScrollSpyMenu from "common/components/ScrollSpyMenu";
 import { Icon } from "react-icons-kit";
 import SearchPanel from "../SearchPanel";
-import ServicesModal from "../ServicesModal";
 import { openModal, closeModal } from "@redq/reuse-modal";
 import { menuData } from "common/data/Interior";
 import lang from "../../../public/images/home-two/lang.svg";
 import globe from "../../../public/images/home-two/glob.svg";
+import ServiceDropDown from "../DropDownMenu";
+import useToggle from "common/hooks/useToggle";
 
+const DropdownMenu = styled(UIMenu)`
+  margin-top: 30px;
+`;
+const DropdownToggle = styled(UIDrop)`
+  background: transparent !important;
+  border: none !important;
+  box-shadow: transparent !important;
+  border-color: transparent !important;
+  color: #fff;
+  font-weight: 600;
+  -webkit-transition: 0.5s;
+  &:hover {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none;
+    border-color: transparent !important;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+`;
+const UncontrolledButtonDropdown = styled(UIBtn)`
+  background: transparent !important;
+  border: none !important;
+  color: #fff;
+  font-weight: 600;
+  &:hover {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: transparent !important;
+    border-color: transparent !important;
+  }
+`;
 const Menu = styled(ScrollSpyMenu)`
   padding: 10px;
   display: flex;
@@ -149,27 +188,6 @@ const NavBar = () => {
     });
   };
 
-  const handleServicesModal = () => {
-    openModal({
-      config: {
-        className: "search-modal",
-        disableDragging: true,
-        width: "90%",
-        height: "100%",
-        animationFrom: { transform: "translateY(100px)" },
-        animationTo: { transform: "translateY(0)" }, //
-        transition: {
-          mass: 1,
-          tension: 180,
-          friction: 26,
-        },
-      },
-      component: ServicesModal,
-      componentProps: {},
-      closeComponent: CloseModalButtonAlt,
-      closeOnClickOutside: true,
-    });
-  };
   const toggleHandler = () => {
     dispatch({
       type: "TOGGLE",
@@ -213,8 +231,13 @@ const NavBar = () => {
             </MenuDrawer>
           </div>
           <NavMenu>
-            <NavLink to="/about" activeStyle>
-              <button onClick={handleServicesModal}>Services</button>
+            <NavLink to="/about">
+              <UncontrolledButtonDropdown>
+                <DropdownToggle>Services</DropdownToggle>
+                <DropdownMenu>
+                  <ServiceDropDown />
+                </DropdownMenu>
+              </UncontrolledButtonDropdown>
             </NavLink>
             {/* // SEARCH component FIXME: Change this to pure Styled components. */}
             <div className="nav-widget-form nav-widget-form-bg ">

@@ -34,12 +34,11 @@ const Button = styled.button`
 `;
 
 const Heading = styled.h1`
-@media screen and (max-width: 480px) {
-  font-size: 32px;
-  padding: 20px;
-  
-}
-`
+  @media screen and (max-width: 480px) {
+    font-size: 32px;
+    padding: 20px;
+  }
+`;
 
 const Banner = () => {
   return (
@@ -53,7 +52,7 @@ const Banner = () => {
                   <Heading>
                     Find affordable <ColoredText>Learning</ColoredText>{" "}
                     Resources
-                    </Heading>
+                  </Heading>
                 </Fade>
                 <div className="banner-btn">
                   <Fade left delay={200}>
