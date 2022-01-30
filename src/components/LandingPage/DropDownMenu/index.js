@@ -8,6 +8,7 @@ import {
   NavLink,
   Button,
 } from "reactstrap";
+import Link from "next/link";
 import Fade from "react-reveal/Fade";
 import useToggle from "common/hooks/useToggle";
 // create three cards
@@ -295,7 +296,7 @@ const ServiceDropDown = () => {
         </Card>
       ) : null}
 
-      {/* Thirs Section */}
+      {/* Third Section */}
       {isOn2 ? (
         <Card className="no-border">
           <h6>Career</h6>
@@ -310,44 +311,64 @@ const ServiceDropDown = () => {
           <TabContent activeTab={active}>
             <Fade up delay={100}>
               <TabPane tabId="11">
-                <CategoryItem>
-                  3D printing & architecture{" "}
-                  <i class="ri-arrow-right-s-line"></i>
-                </CategoryItem>
-                <CategoryItem>
-                  Agile, DevOps, product, project & customer s...{" "}
-                  <i class="ri-arrow-right-s-line"></i>
-                </CategoryItem>
-                <CategoryItem>
-                  Business, processes, development banking...{" "}
-                  <i class="ri-arrow-right-s-line"></i>
-                </CategoryItem>
-                <CategoryItem>
-                  Cloud computing solutions{" "}
-                  <i class="ri-arrow-right-s-line"></i>{" "}
-                </CategoryItem>
-                <CategoryItem>
-                  Vocational education & training - culinary arts...{" "}
-                  <i class="ri-arrow-right-s-line"></i>{" "}
-                </CategoryItem>
-                <CategoryItem>
-                  Data science & analytics across disciplines...{" "}
-                  <i class="ri-arrow-right-s-line"></i>
-                </CategoryItem>
-                <CategoryItem>
-                  Engineering <i class="ri-arrow-right-s-line"></i>{" "}
-                </CategoryItem>
-                <CategoryItem>
-                  Chemistry <i class="ri-arrow-right-s-line"></i>
-                </CategoryItem>
-                <CategoryItem>
-                  GIS, environmental engineering science & re...{" "}
-                  <i class="ri-arrow-right-s-line"></i>
-                </CategoryItem>
-                <CategoryItem>
-                  Global communication & data-driven journalism{" "}
-                  <i class="ri-arrow-right-s-line"></i>
-                </CategoryItem>
+                <Link href="/categories">
+                  <CategoryItem>
+                    3D printing & architecture
+                    <i class="ri-arrow-right-s-line"></i>
+                  </CategoryItem>
+                </Link>
+                <Link href="/categories">
+                  <CategoryItem>
+                    Agile, DevOps, product, project & customer s...
+                    <i class="ri-arrow-right-s-line"></i>
+                  </CategoryItem>
+                </Link>
+                <Link href="/categories">
+                  <CategoryItem>
+                    Business, processes, development banking...{" "}
+                    <i class="ri-arrow-right-s-line"></i>
+                  </CategoryItem>
+                </Link>
+                <Link href="/categories">
+                  <CategoryItem>
+                    Cloud computing solutions{" "}
+                    <i class="ri-arrow-right-s-line"></i>{" "}
+                  </CategoryItem>
+                </Link>
+                <Link href="/categories">
+                  <CategoryItem>
+                    Vocational education & training - culinary arts...{" "}
+                    <i class="ri-arrow-right-s-line"></i>{" "}
+                  </CategoryItem>
+                </Link>
+                <Link href="/categories">
+                  <CategoryItem>
+                    Data science & analytics across disciplines...{" "}
+                    <i class="ri-arrow-right-s-line"></i>
+                  </CategoryItem>
+                </Link>
+                <Link href="/categories">
+                  <CategoryItem>
+                    Engineering <i class="ri-arrow-right-s-line"></i>{" "}
+                  </CategoryItem>
+                </Link>
+                <Link href="/categories">
+                  <CategoryItem>
+                    Chemistry <i class="ri-arrow-right-s-line"></i>
+                  </CategoryItem>
+                </Link>
+                <Link href="/categories">
+                  <CategoryItem>
+                    GIS, environmental engineering science & re...{" "}
+                    <i class="ri-arrow-right-s-line"></i>
+                  </CategoryItem>
+                </Link>
+                <Link href="/categories">
+                  <CategoryItem>
+                    Global communication & data-driven journalism{" "}
+                    <i class="ri-arrow-right-s-line"></i>
+                  </CategoryItem>
+                </Link>
               </TabPane>
             </Fade>
             <TabPane tabId="12">{/* TODO: ADD  career sector */}</TabPane>

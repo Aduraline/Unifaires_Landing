@@ -20,9 +20,9 @@ import GlobalStyle, {
   ContentWrapper,
 } from "components/LandingPage/landingPageStyles";
 import SalesSection from "components/LandingPage/SalesSection";
-import NavbarTwo from "components/LandingPage/NavBarTwo";
+import NavbarTwo from "components/LandingPage/NavBar";
 
-export default function AppCreative() {
+export default function LandingPage() {
   return (
     <ThemeProvider theme={theme}>
       <Fragment>
@@ -67,7 +67,9 @@ export default function AppCreative() {
             <ProSection />
             <PopularTopics />
             <DiverseSection />
+
             <PopularInstructurs />
+
             <TrustedBy />
             <InDemandJob />
             <SalesSection />

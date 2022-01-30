@@ -3,15 +3,16 @@ import styled, { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'DM Sans', sans-serif;
+ 
   }
-  .reuseModalParentWrapper,
+  /* .reuseModalParentWrapper,
   .reuseModalOverlay {
     z-index: 99999;
     .reuseModalHolder{
       background-color: transparent;
       border: none;;
     }
-  } 
+  }  */
   h1,
   h2,
   h3,
@@ -19,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
   h5,
   h6 {
     font-family: 'DM Sans', sans-serif;
+    
   }
   section {
     position: relative;
