@@ -32,7 +32,7 @@
 .vscode/
 # node_modules/
 # build
-# .DS_Store
+.DS_Store
 # *.tgz
 # my-app*
 # template/src/__tests__/__snapshots__/

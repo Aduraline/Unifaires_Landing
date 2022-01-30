@@ -22,17 +22,17 @@ const FlexContainer = styled.div`
 const InnerLeftWapper = styled.div`
   display: flex;
   align-content: center;
-  justify-content: space-between;
+  gap: 20px;
 `;
 const InnerCenterWapper = styled.div`
   display: flex;
   align-content: center;
-  justify-content: space-around;
+  gap: 20px;
 `;
 const InnerRightWapper = styled.div`
   display: flex;
   align-content: center;
-  justify-content: space-between;
+  gap: 20px;
 `;
 
 const Text = styled.p`
@@ -58,8 +58,8 @@ const ProSection = () => {
     <ContainerStyle className="ptb-100">
       <FlexContainer className="container">
         <InnerLeftWapper>
+          <NextImage src={PlayIcon} alt="image" />
           <Text>
-            <NextImage src={PlayIcon} alt="image" />
             Learn in-demand skills with and <br /> endless pool of video courses
           </Text>
         </InnerLeftWapper>
@@ -72,8 +72,8 @@ const ProSection = () => {
           </TextCenter>
         </InnerCenterWapper>
         <InnerRightWapper>
+          <NextImage src={CircleIcon} alt="image" />
           <TextRight>
-            <NextImage src={CircleIcon} alt="image" />
             Learn at your own pace, with lifetime <br /> access on mobile and
             desktop
           </TextRight>

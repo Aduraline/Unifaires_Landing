@@ -31,6 +31,7 @@ import lang from "../../../public/images/home-two/lang.svg";
 import globe from "../../../public/images/home-two/glob.svg";
 import ServiceDropDown from "../DropDownMenu";
 import useToggle from "common/hooks/useToggle";
+import Link from "next/link";
 
 const DropdownMenu = styled(UIMenu)`
   margin-top: 30px;
@@ -272,13 +273,20 @@ const NavBar = () => {
             <NavLink to="/sign-up" activeStyle>
               Pricing
             </NavLink>
-            <NavLink to="/sign-up" activeStyle>
-              Contact
-            </NavLink>
+            <Link href="/contact">
+              <NavLink to="/sign-up" activeStyle>
+                Contact
+              </NavLink>
+            </Link>
           </NavMenu>
+
           <NavBtn>
-            <NavBtnLinkSecondary to="/signin">Log In</NavBtnLinkSecondary>
-            <NavBtnLink to="/signin">Sign In</NavBtnLink>
+            <Link href="/login">
+              <NavBtnLinkSecondary to="/signin">Log In</NavBtnLinkSecondary>
+            </Link>
+            <Link href="/signup">
+              <NavBtnLink to="/signin">Sign Up</NavBtnLink>
+            </Link>
           </NavBtn>
         </Nav>
 

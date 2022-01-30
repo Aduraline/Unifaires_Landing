@@ -1,12 +1,14 @@
-
+import NextImage from "common/components/NextImage";
 import { HeadingText, Text, Heading } from "common/style";
 import React from "react";
 import styled from "styled-components";
+//  icon
+import circle from "../../../public/images/circles.svg";
 
 const TitleContainer = styled.div`
   background: white;
   padding-top: 100px;
-  padding-bottom: 0px;
+  padding-bottom: 40px;
   position: relative;
 `;
 
@@ -15,80 +17,47 @@ const FlexContainer = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
-
-const TopWrapper = styled.div`
+const PopularTopicsStyles = styled.div`
+  padding: 0 15px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 40px;
-  margin-top: 40px;
-  flex-wrap: wrap;
-  overflow: hidden;
-  gap: 1px;
-`;
-
-const BottomWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 100px;
-  flex-wrap: wrap;
-  overflow: hidden;
-  gap: 1px;
-`;
-const Box = styled.div`
-  min-width: 384px;
-  min-height: 336px;
-  background: rgba(88, 50, 218, 0.05);
-  border-radius: 24px;
-`;
-const InnerWrapper = styled.div`
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  max-width: 384px;
-  min-height: 300px;
-  padding: 24px;
-`;
-const BoxHeader = styled.p`
-  font-weight: bold;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  color: rgba(88, 50, 218, 1);
-`;
-const BoxSubheader = styled(BoxHeader)`
-  color: #b8bcca;
-  opacity: 0.5;
-`;
-const SpanStyle = styled(BoxHeader)`
-  color: #12355b;
-`;
-const BoxText = styled.p`
-  font-size: 16px;
-  line-height: 150%;
-  color: #808080;
-  opacity: 0.9;
-`;
-const TopicButton = styled.button`
-  min-width: 240px;
-  height: 60px;
-  background: rgba(254, 185, 95, 0.2);
-  border-radius: 104px;
-  border: none;
-  font-weight: 600;
-`;
-const TopicButton2 = styled(TopicButton)`
-  background: rgba(18, 53, 91, 0.2);
-  border-radius: 104px;
-  font-weight: 600;
+  gap: 20px;
+  .topic__box {
+    cursor: pointer;
+    width: 232px;
+    height: 152px;
+    background: rgba(192, 118, 84, 0.2);
+    border-radius: 16px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 15px;
+    flex-direction: column;
+    -webkit-transition: 0.5s;
+    &:hover {
+      -webkit-transform: translateY(-5px);
+      transform: translateY(-5px);
+      cursor: pointer;
+    }
+  }
+  .pri {
+    background: rgba(88, 50, 218, 0.2);
+  }
+  h6 {
+    font-weight: 600;
+    font-size: 20px;
+    color: #c07654;
+  }
+  .unique {
+    color: #5832da;
+  }
 `;
 
 const PopularTopics = () => {
   return (
     <>
-      <TitleContainer className="container">
+      <TitleContainer className="container ptb-100">
         <HeadingText>Popular Topics</HeadingText>
         <FlexContainer>
           <>
@@ -102,20 +71,46 @@ const PopularTopics = () => {
           </Text>
         </FlexContainer>
       </TitleContainer>
-      <TopWrapper>
-        <TopicButton>Product Design</TopicButton>
-        <TopicButton2>Productivity</TopicButton2>
-        <TopicButton>Product Design</TopicButton>
-        <TopicButton2>Productivity</TopicButton2>
-        <TopicButton>Product Design</TopicButton>
-      </TopWrapper>
-      <BottomWrapper>
-        <TopicButton2>Productivity</TopicButton2>
-        <TopicButton>Product Design</TopicButton>
-        <TopicButton2>Productivity</TopicButton2>
-        <TopicButton>Product Design</TopicButton>
-        <TopicButton2>Productivity</TopicButton2>
-      </BottomWrapper>
+
+      <PopularTopicsStyles className="pb-100">
+        {/* TODO: Build out the actual components */}
+        <div className="topic__box">
+          <div className="icon">
+            <NextImage src={circle} />
+          </div>
+          <h6>Productivity</h6>
+        </div>
+        <div className="topic__box pri">
+          <div className="icon">
+            <NextImage src={circle} />
+          </div>
+          <h6 className="unique">Productivity</h6>
+        </div>
+        <div className="topic__box">
+          <div className="icon">
+            <NextImage src={circle} />
+          </div>
+          <h6>Productivity</h6>
+        </div>
+        <div className="topic__box pri">
+          <div className="icon">
+            <NextImage src={circle} />
+          </div>
+          <h6 className="unique">Productivity</h6>
+        </div>
+        <div className="topic__box">
+          <div className="icon">
+            <NextImage src={circle} />
+          </div>
+          <h6>Productivity</h6>
+        </div>
+        <div className="topic__box pri">
+          <div className="icon">
+            <NextImage src={circle} />
+          </div>
+          <h6 className="unique">Productivity</h6>
+        </div>
+      </PopularTopicsStyles>
     </>
   );
 };
