@@ -3,12 +3,15 @@ import Link from "next/link";
 import styled from "styled-components";
 
 export const Nav = styled.nav`
+  position: fixed;
+  border-bottom: 1px solid rgba(18, 53, 91, 0.15);
+  width: 100%;
   background: #5832da;
-  height: 80px;
+  height: 112px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem calc((100vw - 1400px) / 2);
+  padding: 0.5rem calc((100vw - 1600px) / 2);
   z-index: 10;
 
   @media screen and (max-width: 768px) {
@@ -19,11 +22,20 @@ export const Nav = styled.nav`
 `;
 
 export const NavLink = styled.h6`
-  color: #fff;
+  p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    color: white;
+  }
+  height: 100px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  text-decoration: none;
+  align-self: start;
   padding: 0 1rem;
+  color: #fff;
+  text-decoration: none;
   -webkit-transition: 0.5s;
   height: 100%;
   button {
@@ -46,14 +58,7 @@ export const NavLink = styled.h6`
     color: red;
   }
 `;
-export const Logo = styled.h1`
-  font-style: normal;
-  font-weight: 500;
-  font-size: 30px;
-  color: white;
-  display: flex;
-  align-items: center;
-`;
+export const Logo = styled.h1``;
 
 export const Bars = styled(FaBars)`
   display: none;

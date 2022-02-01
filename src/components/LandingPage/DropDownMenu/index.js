@@ -49,13 +49,13 @@ const ButtonWrapper = styled.div`
   margin-bottom: 20px;
 `;
 const CategoryItem = styled.p`
-  font-weight: 500;
-  font-size: 15px;
-  min-width: 300px;
-  padding: 0 15px;
-  color: #808080;
-  display: flex;
-  justify-content: space-between;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  min-width: 300px !important;
+  padding: 0 15px !important;
+  color: #808080 !important;
+  display: flex !important;
+  justify-content: space-between !important;
   align-items: center;
   cursor: pointer;
   i {
@@ -64,9 +64,9 @@ const CategoryItem = styled.p`
   -webkit-transition: 0.5s;
   &:hover {
     background: none;
-    color: #5832da;
-    -webkit-transform: translateY(-2px);
-    transform: translateY(-2px);
+    color: #5832da !important;
+    -webkit-transform: translateY(-2px) !important;
+    transform: translateY(-2px) !important;
   }
 `;
 const CareerItem = styled(CategoryItem)`
@@ -110,7 +110,8 @@ const Buttonn = styled(Button)`
   p {
     color: ${(props) => (props.secondary ? "#7DBF10;" : "white")};
     font-weight: 900;
-    font-size: 15px;
+    font-size: 15px !important;
+    box-shadow: none;
   }
 `;
 const ServiceDropDown = () => {

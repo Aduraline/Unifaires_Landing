@@ -196,102 +196,94 @@ const NavBar = () => {
   };
   return (
     <>
-      <div className={sticky ? "is-sticky navbar-area" : "navbar-area"}>
-        <Nav>
-          <NavLink to="/">
-            <Logo>Unifaires</Logo>
+      <Nav>
+        <NavLink>
+          <p>Unifaires</p>{" "}
+        </NavLink>
+
+        <SearchButton
+          variant="textButton"
+          onClick={handleSearchModal}
+          icon={<i className="flaticon-magnifying-glass" />}
+          aria-label="search button"
+        />
+
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <MenuDrawer
+            width="250px"
+            placement="right"
+            drawerHandler={<Hamburg />}
+            open={state.isOpen}
+            toggleHandler={toggleHandler}
+          >
+            <button
+              type="button"
+              className={state.isOpen ? "active" : ""}
+              onClick={toggleHandler}
+              aria-label="drawer toggle button"
+            >
+              <Icon icon={androidClose} />
+            </button>
+
+            <Menu menuItems={menuData} drawerClose={true} offset={-100} />
+          </MenuDrawer>
+        </div>
+        <NavMenu>
+          <NavLink to="/about">
+            <UncontrolledButtonDropdown>
+              <DropdownToggle>Services</DropdownToggle>
+              <DropdownMenu>
+                <ServiceDropDown />
+              </DropdownMenu>
+            </UncontrolledButtonDropdown>
+          </NavLink>
+          {/* // SEARCH component FIXME: Change this to pure Styled components. */}
+          <div className="nav-widget-form nav-widget-form-bg ">
+            <form className="search-form">
+              <input
+                type="search"
+                className="form-control"
+                placeholder="Search for anything "
+                // onClick={handleSearchModal}
+              />
+              <button type="button">
+                <i className="ri-search-line"></i>
+              </button>
+            </form>
+          </div>
+          <NavLink>
+            <NextImage
+              src={lang}
+              width={25}
+              height={25}
+              alt=""
+              className="svg_logo"
+            />
           </NavLink>
 
-          <div>
-            <SearchButton
-              variant="textButton"
-              onClick={handleSearchModal}
-              icon={<i className="flaticon-magnifying-glass" />}
-              aria-label="search button"
-            />
-          </div>
-
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <MenuDrawer
-              width="250px"
-              placement="right"
-              drawerHandler={<Hamburg />}
-              open={state.isOpen}
-              toggleHandler={toggleHandler}
-            >
-              <button
-                type="button"
-                className={state.isOpen ? "active" : ""}
-                onClick={toggleHandler}
-                aria-label="drawer toggle button"
-              >
-                <Icon icon={androidClose} />
-              </button>
-
-              <Menu menuItems={menuData} drawerClose={true} offset={-100} />
-            </MenuDrawer>
-          </div>
-          <NavMenu>
-            <NavLink to="/about">
-              <UncontrolledButtonDropdown>
-                <DropdownToggle>Services</DropdownToggle>
-                <DropdownMenu>
-                  <ServiceDropDown />
-                </DropdownMenu>
-              </UncontrolledButtonDropdown>
-            </NavLink>
-            {/* // SEARCH component FIXME: Change this to pure Styled components. */}
-            <div className="nav-widget-form nav-widget-form-bg ">
-              <form className="search-form">
-                <input
-                  type="search"
-                  className="form-control"
-                  placeholder="Search for anything "
-                  // onClick={handleSearchModal}
-                />
-                <button type="button">
-                  <i className="ri-search-line"></i>
-                </button>
-              </form>
-            </div>
-            <NavLink>
-              <NextImage
-                src={lang}
-                width={25}
-                height={25}
-                alt=""
-                className="svg_logo"
-              />
-            </NavLink>
-
-            <NavLink to="/about" activeStyle>
-              Unifairs Bussiness
-            </NavLink>
+          <NavLink to="/about">Unifairs Bussiness</NavLink>
+          <NavLink to="/sign-up" activeStyle>
+            About
+          </NavLink>
+          <NavLink to="/sign-up" activeStyle>
+            Pricing
+          </NavLink>
+          <Link href="/contact">
             <NavLink to="/sign-up" activeStyle>
-              About
+              Contact
             </NavLink>
-            <NavLink to="/sign-up" activeStyle>
-              Pricing
-            </NavLink>
-            <Link href="/contact">
-              <NavLink to="/sign-up" activeStyle>
-                Contact
-              </NavLink>
-            </Link>
-          </NavMenu>
+          </Link>
+        </NavMenu>
 
-          <NavBtn>
-            <Link href="/login">
-              <NavBtnLinkSecondary to="/signin">Log In</NavBtnLinkSecondary>
-            </Link>
-            <Link href="/signup">
-              <NavBtnLink to="/signin">Sign Up</NavBtnLink>
-            </Link>
-          </NavBtn>
-        </Nav>
-
-        <div></div>
-      </div>
+        <NavBtn>
+          <Link href="/login">
+            <NavBtnLinkSecondary to="/signin">Log In</NavBtnLinkSecondary>
+          </Link>
+          <Link href="/signup">
+            <NavBtnLink to="/signin">Sign Up</NavBtnLink>
+          </Link>
+        </NavBtn>
+      </Nav>
     </>
   );
 };
