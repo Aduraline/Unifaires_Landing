@@ -34,7 +34,7 @@ import useToggle from "common/hooks/useToggle";
 import Link from "next/link";
 
 const DropdownMenu = styled(UIMenu)`
-  margin-top: 30px;
+  margin-top: 45px;
 `;
 const DropdownToggle = styled(UIDrop)`
   background: transparent !important;

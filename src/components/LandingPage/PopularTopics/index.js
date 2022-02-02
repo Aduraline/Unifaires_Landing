@@ -22,6 +22,12 @@ const PopularTopicsStyles = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
+  overflow-x: scroll;
+  ::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
+  }
+
   .topic__box {
     cursor: pointer;
     width: 232px;
@@ -72,7 +78,7 @@ const PopularTopics = () => {
         </FlexContainer>
       </TitleContainer>
 
-      <PopularTopicsStyles className="pb-100">
+      <PopularTopicsStyles className="pb-100 container">
         {/* TODO: Build out the actual components */}
         <div className="topic__box">
           <div className="icon">

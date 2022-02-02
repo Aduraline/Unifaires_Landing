@@ -18,6 +18,11 @@ const FlexContainer = styled.div`
   align-items: center;
   width: 100%;
   justify-content: space-between;
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    gap: 100px;
+  }
 `;
 const InnerLeftWapper = styled.div`
   display: flex;
@@ -49,10 +54,6 @@ const TextRight = styled(Text)`
   color: rgba(88, 50, 218, 1);
 `;
 
-const Icon = styled.img`
-  padding: 10px;
-`;
-
 const ProSection = () => {
   return (
     <ContainerStyle className="ptb-100">
@@ -74,8 +75,8 @@ const ProSection = () => {
         <InnerRightWapper>
           <NextImage src={CircleIcon} alt="image" />
           <TextRight>
-            Learn at your own pace, with lifetime <br /> access on mobile and
-            desktop
+            Learn at your own pace, with life
+            <br /> time access.
           </TextRight>
         </InnerRightWapper>
       </FlexContainer>

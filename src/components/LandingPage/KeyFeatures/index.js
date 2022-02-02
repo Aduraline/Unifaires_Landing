@@ -27,7 +27,6 @@ const Text = styled.p`
   @media (max-width: 768px) {
     align-items: center;
     text-align: center !important;
-  
   }
 `;
 
@@ -56,7 +55,6 @@ const FlexContainer = styled.div`
   grid-gap: 30px;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-   
   }
   @media (max-width: 480px) {
     grid-template-columns: 1fr;
@@ -70,7 +68,6 @@ const InnerWrapper = styled.div`
   @media (max-width: 768px) {
     align-items: center;
     text-align: center !important;
-  
   }
 `;
 const Icon = styled(image)`
@@ -112,7 +109,7 @@ const KeyFeatures = () => {
             <Header>Apply to the right job</Header>
             <Text>
               Get expert coaching to deliver on-demand skills that can help you
-              navigate through list of jobs to find that right one.
+              navigate through list of jobs.
             </Text>
             <Button className="default-btn">
               Search now

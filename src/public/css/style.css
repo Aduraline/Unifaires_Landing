@@ -1916,13 +1916,18 @@ Main Banner Area
 }
 
 .banner-content-two h1 {
+  font-weight: bold;
+  line-height: 180%;
   font-size: 62px;
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
   line-height: 1.2;
   color: var(--titleColor);
-  min-width: 1206px;
   text-align: center;
   color: #ffffff;
+  @media screen and (max-width: 480px) {
+    font-size: 32px;
+    line-height: 180%;
+  }
 }
 
 .banner-content-two p {

@@ -54,13 +54,20 @@ const FlexContainer = styled.div`
 `;
 const Flex = styled.div`
   @media screen and (max-width: 768px) {
-    width: 384px;
   }
 `;
 const FlexBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 10px;
+  min-height: 540px;
+  margin-right: 10px;
+  @media screen and (max-width: 768px) and (min-height: 400px) {
+    margin-left: 50px;
+  }
+  @media screen and (max-width: 480px) {
+  }
 `;
 
 const Box = styled.div`

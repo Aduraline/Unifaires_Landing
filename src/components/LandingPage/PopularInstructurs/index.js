@@ -31,9 +31,14 @@ const Wrapper = styled.div`
     gap: 20px;
   }
   @media (max-width: 800px) {
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin-top: 40px;
+    padding-top: 120px;
+    overflow-x: scroll;
+    ::-webkit-scrollbar {
+      width: 0; /* Remove scrollbar space */
+      background: transparent; /* Optional: just make scrollbar invisible */
+    }
   }
 `;
 

@@ -11,6 +11,11 @@ const FlexContainer = styled.div`
   flex-direction: column;
   height: 800px;
   z-index: 3;
+  @media screen and (max-width: 480px) {
+    .banner-btn {
+      margin-top: 50px;
+    }
+  }
 `;
 
 const Button = styled.button`
@@ -31,12 +36,9 @@ const Button = styled.button`
     color: white;
     border: 1px solid white;
   }
-`;
 
-const Heading = styled.h1`
-  @media screen and (max-width: 480px) {
-    font-size: 32px;
-    padding: 20px;
+  @media screen and (min-width: 480px) {
+    margin-bottom: -100px;
   }
 `;
 
@@ -49,10 +51,10 @@ const Banner = () => {
             <div className="banner-content-two">
               <FlexContainer>
                 <Fade up delay={100}>
-                  <Heading>
+                  <h1>
                     Find affordable <ColoredText>Learning</ColoredText>{" "}
                     Resources
-                  </Heading>
+                  </h1>
                 </Fade>
                 <div className="banner-btn">
                   <Fade left delay={200}>

@@ -13,6 +13,9 @@ import CategoryDropDown from "components/Categories/CategoryDropDown/index.";
 import Statistics from "components/Categories/Statistics";
 import BreadCrumbs from "components/Categories/BreadCrumbs";
 import Results from "components/Categories/Results";
+import { DrawerProvider } from "common/contexts/DrawerContext";
+import NavBar from "components/LandingPage/NavBar";
+import Footer from "components/LandingPage/Footer";
 export default function CategoriesPage() {
   return (
     <ThemeProvider theme={theme}>
@@ -45,6 +48,9 @@ export default function CategoriesPage() {
 
         {/* start category */}
         <AppWrapper>
+          <DrawerProvider>
+            <NavBar />
+          </DrawerProvider>
           <ContentWrapper>
             <CategoryDropDown />
 
@@ -54,6 +60,7 @@ export default function CategoriesPage() {
             </Fade>
             <Results />
           </ContentWrapper>
+          <Footer />
         </AppWrapper>
         {/* end */}
       </Fragment>

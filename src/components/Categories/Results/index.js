@@ -8,6 +8,7 @@ import Dropdown from "../Dropdown";
 import Card from "../components/Card";
 
 const ResultStyles = styled.div`
+  margin-bottom: 70px;
   padding-top: 40px;
   .header {
     h1 {
