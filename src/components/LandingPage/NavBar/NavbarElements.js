@@ -1,5 +1,4 @@
 import { FaBars } from "react-icons/fa";
-import Link from "next/link";
 import styled from "styled-components";
 
 export const Nav = styled.nav`
@@ -7,7 +6,7 @@ export const Nav = styled.nav`
   border-bottom: 1px solid rgba(18, 53, 91, 0.15);
   width: 100%;
   background: #5832da;
-  height: 112px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,6 +26,11 @@ export const NavLink = styled.h6`
     font-weight: 500;
     font-size: 30px;
     color: white;
+    -webkit-transition: 0.5s;
+    &:hover {
+      -webkit-transform: translateX(-5px);
+      transform: translateX(-5px);
+    }
   }
   height: 100px;
   display: flex;
@@ -37,6 +41,11 @@ export const NavLink = styled.h6`
   color: #fff;
   text-decoration: none;
   -webkit-transition: 0.5s;
+  &:hover {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  -webkit-transition: 0.5s;
   height: 100%;
   button {
     background: transparent;
@@ -45,8 +54,8 @@ export const NavLink = styled.h6`
     font-weight: 600;
     -webkit-transition: 0.5s;
     &:hover {
-      -webkit-transform: translateX(-5px);
-      transform: translateX(-5px);
+      -webkit-transform: translateX(-2px);
+      transform: translateX(-2px);
     }
   }
   @media (max-width: 1024px) {

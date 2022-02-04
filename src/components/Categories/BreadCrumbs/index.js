@@ -5,7 +5,8 @@ import styled from "styled-components";
 import BreadIcon from "../../../public/images/bread.svg";
 
 const BreadCrumbStyles = styled.div`
-  padding-bottom: 40px;
+  padding-top: 100px;
+  padding-bottom: 50px;
   .category-nav {
     display: flex;
     align-items: center;
@@ -28,13 +29,20 @@ const BreadCrumbStyles = styled.div`
         color: #000000;
         font-weight: 500;
         cursor: pointer;
+        -webkit-transition: 0.5s;
+        &:hover {
+          -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+          cursor: pointer;
+          color: #5832da;
+        }
       }
     }
   }
 `;
 export default function BreadCrums() {
   return (
-    <BreadCrumbStyles className="container">
+    <BreadCrumbStyles>
       <div className="category-nav">
         <div className="main-category">
           <p>Design</p>

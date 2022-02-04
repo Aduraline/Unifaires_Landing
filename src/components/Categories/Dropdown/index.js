@@ -14,6 +14,7 @@ const UncontrolledButtonDropdown = styled(UIDrop)`
     border: none;
     font-weight: 500;
     color: rgba(18, 53, 91, 0.8);
+    text-transform: uppercase;
     -webkit-transition: 0.5s;
     &:hover {
       -webkit-transform: translateX(-5px);

@@ -1,6 +1,7 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
 import styled from "styled-components";
+import Link from "next/link";
 
 const ColoredText = styled.span``;
 
@@ -58,7 +59,9 @@ const Banner = () => {
                 </Fade>
                 <div className="banner-btn">
                   <Fade left delay={200}>
-                    <Button>Get in Touch</Button>
+                    <Link href="/contact">
+                      <Button>Get in Touch</Button>
+                    </Link>
                   </Fade>
                 </div>
               </FlexContainer>

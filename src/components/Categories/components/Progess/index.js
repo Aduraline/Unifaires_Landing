@@ -60,7 +60,7 @@ export default function index() {
   return (
     <ProgressStyles className="container">
       <div className="header">
-        <h6>Top Jobs</h6>
+        <h6>TOP JOB TITLE INSIGHTS</h6>
         <h6>POSTINGS</h6>
       </div>
       <div className="stats">

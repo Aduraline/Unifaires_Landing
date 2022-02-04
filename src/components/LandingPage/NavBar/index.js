@@ -175,7 +175,7 @@ const NavBar = () => {
         width: "90%",
         height: "100%",
         animationFrom: { transform: "translateY(100px)" },
-        animationTo: { transform: "translateY(0)" }, //
+        animationTo: { transform: "translateY(0)" },
         transition: {
           mass: 1,
           tension: 180,
@@ -197,9 +197,11 @@ const NavBar = () => {
   return (
     <>
       <Nav>
-        <NavLink>
-          <p>Unifaires</p>{" "}
-        </NavLink>
+        <Link href="/">
+          <NavLink>
+            <p>Unifaires</p>{" "}
+          </NavLink>
+        </Link>
 
         <SearchButton
           variant="textButton"
@@ -224,12 +226,11 @@ const NavBar = () => {
             >
               <Icon icon={androidClose} />
             </button>
-
             <Menu menuItems={menuData} drawerClose={true} offset={-100} />
           </MenuDrawer>
         </div>
         <NavMenu>
-          <NavLink to="/about">
+          <NavLink>
             <UncontrolledButtonDropdown>
               <DropdownToggle>Services</DropdownToggle>
               <DropdownMenu>
@@ -261,26 +262,20 @@ const NavBar = () => {
             />
           </NavLink>
 
-          <NavLink to="/about">Unifairs Bussiness</NavLink>
-          <NavLink to="/sign-up" activeStyle>
-            About
-          </NavLink>
-          <NavLink to="/sign-up" activeStyle>
-            Pricing
-          </NavLink>
+          <NavLink>Unifairs Bussiness</NavLink>
+          <NavLink>About</NavLink>
+          <NavLink>Pricing</NavLink>
           <Link href="/contact">
-            <NavLink to="/sign-up" activeStyle>
-              Contact
-            </NavLink>
+            <NavLink>Contact</NavLink>
           </Link>
         </NavMenu>
 
         <NavBtn>
           <Link href="/login">
-            <NavBtnLinkSecondary to="/signin">Log In</NavBtnLinkSecondary>
+            <NavBtnLinkSecondary>Log In</NavBtnLinkSecondary>
           </Link>
           <Link href="/signup">
-            <NavBtnLink to="/signin">Sign Up</NavBtnLink>
+            <NavBtnLink>Sign Up</NavBtnLink>
           </Link>
         </NavBtn>
       </Nav>

@@ -5,11 +5,11 @@ import Fade from "react-reveal/Fade";
 // icon
 import SettingIcon from "../../../public/images/Setting.svg";
 import Dropdown from "../Dropdown";
-import Card from "../components/Card";
+import DegreeCard from "../components/DegreeCard";
 
-const ResultStyles = styled.div`
+const DegreeCourseStyles = styled.div`
   margin-bottom: 70px;
-  padding-top: 40px;
+  padding-top: 50px;
   .header {
     h1 {
       font-weight: bold;
@@ -92,9 +92,9 @@ const ResultStyles = styled.div`
 `;
 export default function index() {
   return (
-    <ResultStyles className="container">
+    <DegreeCourseStyles className="container">
       <div className="header">
-        <h1>Jobs</h1>
+        <h1>Degree, Courses & Certifications</h1>
       </div>
       <div className="subheaderWrapper">
         <h6>
@@ -103,7 +103,7 @@ export default function index() {
         </h6>
         <div className="right-section">
           <Label for="exampleCustomSwitch" className="form-check-label">
-            <p> Jobs Alerts</p>
+            <p>Short Courses Alerts</p>
           </Label>
           <div className="form-check form-switch">
             <Input type="switch" name="customSwitch" id="exampleCustomSwitch" />
@@ -112,11 +112,12 @@ export default function index() {
         </div>
       </div>
       <div className="filter-section">
-        <Dropdown title="Experience Level" />
-        <Dropdown title="Job title" />
-        <Dropdown title="Hard & Soft Skills" />
-        <Dropdown title="Average Yearly Salary" />
-        <Dropdown title="Job Type" />
+        <Dropdown title="course TITLE" />
+        <Dropdown title="course level" />
+        <Dropdown title="course MODE" />
+        <Dropdown title="EXPERTISE & SKILLS" />
+        <Dropdown title="SKILL MODE" />
+        <Dropdown title="Language" />
       </div>
       <div className="pagination">
         <div className="prev">
@@ -133,16 +134,14 @@ export default function index() {
       <div className="result-section">
         {/* build  card component and reuse it */}
         <Fade up delay={100}>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />{" "}
+          <DegreeCard />
+          <DegreeCard />
+          <DegreeCard />
+          <DegreeCard />
+          <DegreeCard />
+          <DegreeCard />
         </Fade>
       </div>
-    </ResultStyles>
+    </DegreeCourseStyles>
   );
 }

@@ -12,10 +12,13 @@ import GlobalStyle, {
 import CategoryDropDown from "components/Categories/CategoryDropDown/index.";
 import Statistics from "components/Categories/Statistics";
 import BreadCrumbs from "components/Categories/BreadCrumbs";
-import Results from "components/Categories/Results";
+import Jobs from "components/Categories/Jobs";
 import { DrawerProvider } from "common/contexts/DrawerContext";
 import NavBar from "components/LandingPage/NavBar";
 import Footer from "components/LandingPage/Footer";
+import DegreeCourse from "components/Categories/DegreeCourse";
+import Funding from "components/Categories/Funding";
+
 export default function CategoriesPage() {
   return (
     <ThemeProvider theme={theme}>
@@ -52,13 +55,14 @@ export default function CategoriesPage() {
             <NavBar />
           </DrawerProvider>
           <ContentWrapper>
-            <CategoryDropDown />
-
             <BreadCrumbs />
-            <Fade down delay={100}>
+            <CategoryDropDown />
+            <Fade left delay={100}>
               <Statistics />
             </Fade>
-            <Results />
+            <Jobs />
+            <DegreeCourse />
+            <Funding />
           </ContentWrapper>
           <Footer />
         </AppWrapper>

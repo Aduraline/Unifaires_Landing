@@ -3,8 +3,7 @@ import styled from "styled-components";
 import Dropdown from "../Dropdown";
 
 const CategoryStyles = styled.div`
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
   .dopedown__wrapper {
     display: flex;
     align-items: center;

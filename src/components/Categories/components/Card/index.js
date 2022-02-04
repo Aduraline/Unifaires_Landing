@@ -70,6 +70,14 @@ const CardStyles = styled.div`
       border: none;
       color: white;
       font-weight: bold;
+
+      -webkit-transition: 0.5s;
+      &:hover {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+
+        cursor: pointer;
+      }
     }
   }
 `;
@@ -96,7 +104,7 @@ export default function Card() {
           </p>
         </div>
         <div className="card__footer">
-          <button>Apply Now</button>
+          <button className="default-btn">Apply Now</button>
           <button className="full">Shortlist</button>
         </div>
       </div>
