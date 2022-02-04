@@ -3,12 +3,7 @@ import styled from "styled-components";
 import dynamic from "next/dynamic";
 const OwlCarousel = dynamic(import("react-owl-carousel3"));
 import Fade from "react-reveal/Fade";
-import NextImage from "common/components/NextImage";
-// Icons
-import jobOne from "../../../public/images/job1.svg";
-import jobTwo from "../../../public/images/job2.svg";
-import jobThree from "../../../public/images/cardthree.svg";
-import adoptionImage from "../../../public/images/adoptionImage.svg";
+
 import { Heading, HeadingText, Text } from "common/style";
 
 const options = {
@@ -65,7 +60,7 @@ const FlexBox = styled.div`
 
 const Box = styled.div`
   min-width: 384px;
-  min-height: 336px;
+  min-height: 510px;
   @media screen and (max-width: 768px) {
     width: 384px;
   }
@@ -106,17 +101,16 @@ const InnerWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  max-width: 384px;
+  /* max-width: 384px; */
   padding-top: 10px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 15px;
+  padding-right: 15px;
 `;
 const BottomWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 384px;
-  padding: 24px;
+  padding: 15px 25px;
 `;
 const LeftInnerWrapper = styled.div`
   display: flex;
@@ -145,6 +139,11 @@ const BoxText = styled.p`
   line-height: 150%;
   color: #808080;
   opacity: 0.9;
+  width: 384px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `;
 const BoxButton = styled.button`
   width: 152px;
@@ -153,6 +152,7 @@ const BoxButton = styled.button`
   border-radius: 30px;
   border: none;
   color: white;
+  font-weight: 500;
   margin-bottom: 10px;
 `;
 const Button = styled.button`
@@ -195,7 +195,7 @@ const ChooseUs = () => {
             <FlexBox>
               <Box>
                 <Flex>
-                  <NextImage src={jobOne} alt="image" />
+                  <img src="./images/job1.svg" alt="image" />
                 </Flex>
                 <InnerWrapper>
                   <BoxButton>Meta</BoxButton>
@@ -209,7 +209,7 @@ const ChooseUs = () => {
                 <BottomWrapper>
                   <LeftInnerWrapper>
                     <Text>40 Applicants</Text>
-                    <NextImage src={adoptionImage} alt="image" />
+                    <img src="./images/adoptionImage.svg" alt="image" />
                   </LeftInnerWrapper>
                   <Button className="default-btn">
                     Apply Now <i class="ri-arrow-right-s-line"></i>
@@ -220,7 +220,7 @@ const ChooseUs = () => {
             <FlexBox>
               <BoxTwo>
                 <Flex>
-                  <NextImage src={jobTwo} alt="image" />
+                  <img src="./images/job2.svg" alt="image" />
                 </Flex>
                 <InnerWrapper>
                   <BoxButton>Google</BoxButton>
@@ -235,7 +235,7 @@ const ChooseUs = () => {
                 <BottomWrapper>
                   <LeftInnerWrapper>
                     <p>40 Applicants</p>
-                    <NextImage src={adoptionImage} alt="image" />
+                    <img src="./images/adoptionImage.svg" alt="image" />
                   </LeftInnerWrapper>
                   <Button className="default-btn">
                     Apply Now <i class="ri-arrow-right-s-line"></i>
@@ -246,7 +246,7 @@ const ChooseUs = () => {
             <FlexBox>
               <BoxThree>
                 <Flex>
-                  <NextImage src={jobThree} alt="image" />
+                  <img src="./images/cardthree.svg" alt="image" />
                 </Flex>
                 <InnerWrapper>
                   <BoxButton>IBM</BoxButton>
@@ -260,7 +260,7 @@ const ChooseUs = () => {
                 <BottomWrapper>
                   <LeftInnerWrapper>
                     <p>40 Applicants</p>
-                    <NextImage src={adoptionImage} alt="image" />
+                    <img src="./images/adoptionImage.svg" alt="image" />
                   </LeftInnerWrapper>
                   <Button className="default-btn">
                     Apply Now <i class="ri-arrow-right-s-line"></i>
@@ -271,7 +271,7 @@ const ChooseUs = () => {
             <FlexBox>
               <BoxThree>
                 <Flex>
-                  <NextImage src={jobThree} alt="image" />
+                  <img src="./images/cardthree.svg" alt="image" />
                 </Flex>
                 <InnerWrapper>
                   <BoxButton>IBM</BoxButton>
@@ -285,7 +285,7 @@ const ChooseUs = () => {
                 <BottomWrapper>
                   <LeftInnerWrapper>
                     <p>40 Applicants</p>
-                    <NextImage src={adoptionImage} alt="image" />
+                    <img src="./images/adoptionImage.svg" alt="image" />
                   </LeftInnerWrapper>
                   <Button className="default-btn">
                     Apply Now <i class="ri-arrow-right-s-line"></i>

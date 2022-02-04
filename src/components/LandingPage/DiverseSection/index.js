@@ -4,12 +4,6 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import NextImage from "common/components/NextImage";
 const OwlCarousel = dynamic(import("react-owl-carousel3"));
-
-// Icons
-import CardOne from "../../../public/images/cardone.svg";
-import Adoption from "../../../public/images/adoptionImage.svg";
-import CardTwo from "../../../public/images/cardtwo.svg";
-import CardThree from "../../../public/images/cardthree.svg";
 import { Heading, HeadingText, Text } from "common/style";
 
 const options = {
@@ -213,7 +207,7 @@ const DiverseSection = () => {
             <FlexBox>
               <Box>
                 <Flex>
-                  <NextImage src={CardOne} alt="image" />
+                  <img src="./images/cardone.svg" alt="image" />
                 </Flex>
                 <InnerWrapper>
                   <BoxButton>Oxford University</BoxButton>
@@ -227,7 +221,7 @@ const DiverseSection = () => {
                 <BottomWrapper>
                   <LeftInnerWrapper>
                     <AdoptionText>5K+ Registered</AdoptionText>
-                    <NextImage src={Adoption} alt="image" />
+                    <img src="/images/adoptionImage.svg" alt="image" />
                   </LeftInnerWrapper>
                   <Button className="default-btn">
                     Enroll Now - 5€<i class="ri-arrow-right-s-line"></i>
@@ -239,7 +233,7 @@ const DiverseSection = () => {
             <FlexBox>
               <BoxTwo>
                 <Flex>
-                  <NextImage src={CardTwo} alt="image" />
+                  <img src="./images/cardtwo.svg" alt="image" />
                 </Flex>
                 <InnerWrapper>
                   <BoxButton>Oxford University</BoxButton>
@@ -253,7 +247,7 @@ const DiverseSection = () => {
                 <BottomWrapper>
                   <LeftInnerWrapper>
                     <AdoptionText>5K+ Registered</AdoptionText>
-                    <NextImage src={Adoption} alt="image" />
+                    <img src="/images/adoptionImage.svg" alt="image" />
                   </LeftInnerWrapper>
                   <Button className="default-btn">
                     Enroll Now - 5€<i class="ri-arrow-right-s-line"></i>
@@ -265,7 +259,7 @@ const DiverseSection = () => {
             <FlexBox>
               <BoxThree>
                 <Flex>
-                  <NextImage src={CardThree} alt="image" />
+                  <img src="./images/cardthree.svg" alt="image" />
                 </Flex>
                 <InnerWrapper>
                   <BoxButton>Sewanee University</BoxButton>
@@ -279,7 +273,7 @@ const DiverseSection = () => {
                 <BottomWrapper>
                   <LeftInnerWrapper>
                     <AdoptionText>5K+ Registered</AdoptionText>
-                    <NextImage src={Adoption} alt="image" />
+                    <img src="/images/adoptionImage.svg" alt="image" />
                   </LeftInnerWrapper>
                   <Button className="default-btn">
                     Enroll Now - 5€ <i class="ri-arrow-right-s-line"></i>
@@ -291,7 +285,7 @@ const DiverseSection = () => {
             <FlexBox>
               <BoxThree>
                 <Flex>
-                  <NextImage src={CardThree} alt="image" />
+                  <img src="./images/cardthree.svg" alt="image" />
                 </Flex>
                 <InnerWrapper>
                   <BoxButton>Sewanee University</BoxButton>
@@ -305,7 +299,7 @@ const DiverseSection = () => {
                 <BottomWrapper>
                   <LeftInnerWrapper>
                     <AdoptionText>5K+ Registered</AdoptionText>
-                    <NextImage src={Adoption} alt="image" />
+                    <img src="/images/adoptionImage.svg" alt="image" />
                   </LeftInnerWrapper>
                   <Button className="default-btn">
                     Enroll Now - 5€ <i class="ri-arrow-right-s-line"></i>
