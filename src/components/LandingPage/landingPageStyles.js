@@ -53,7 +53,7 @@ export const AppWrapper = styled.div`
   // FIXME: Remove me when the I'm fully responsive😆
 
   @media screen and (max-width: 1000px) {
-    display: none;
+    /* display: none; */
   }
 `;
 

@@ -35,6 +35,10 @@ const Box = styled.div`
     transform: translateX(-5px);
     cursor: pointer;
   }
+  @media screen and (max-width: 480px) {
+    min-width: 243px;
+    min-height: 396px;
+  }
 `;
 
 const InnerWrapper = styled.div`
@@ -58,6 +62,10 @@ const BoxText = styled.p`
   line-height: 150%;
   color: #808080;
   opacity: 0.9;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `;
 const BottomWrapper = styled.div`
   display: flex;

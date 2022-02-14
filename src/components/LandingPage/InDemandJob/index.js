@@ -28,7 +28,7 @@ const FlexContainer = styled.div`
 const ChooseUs = () => {
   return (
     // FIXME:  Add reusable components make it more clean just use the props
-    <ContainerStyle className=" ptb-100 container">
+    <ContainerStyle className="container ptb-100">
       <HeadingText>In-Demand Jobs</HeadingText>
       <FlexContainer>
         <Heading>
@@ -40,8 +40,8 @@ const ChooseUs = () => {
           See all <i class="ri-arrow-right-s-line"></i>
         </Text>
       </FlexContainer>
-
-      <div className="in_demand   pt-45">
+      {/* TODO: redo the dammm section */}
+      <div className="in_demand ">
         <JobCard
           image="./images/job1.svg"
           title="Philosophy and Theology"

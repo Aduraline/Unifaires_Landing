@@ -13,7 +13,8 @@ const ContainerStyle = styled.div`
     overflow-x: scroll;
     ::-webkit-scrollbar {
       width: 100px; /* Remove scrollbar space */
-      background: transparent; /* Optional: just make scrollbar invisible */
+      background: transparent;
+      /* Optional: just make scrollbar invisible */
     }
   }
 `;
