@@ -18,7 +18,13 @@ import NavBar from "components/LandingPage/NavBar";
 import Footer from "components/LandingPage/Footer";
 import DegreeCourse from "components/Categories/DegreeCourse";
 import Funding from "components/Categories/Funding";
+import { subCategories } from "common/data/categoryData";
 
+// 1. Create category array
+
+const item = ["samuel", "wanjiru", "pauline"];
+
+console.log(item, "yooo");
 export default function CategoriesPage() {
   return (
     <ThemeProvider theme={theme}>
@@ -55,7 +61,10 @@ export default function CategoriesPage() {
             <NavBar />
           </DrawerProvider>
           <ContentWrapper>
-            <BreadCrumbs />
+            <BreadCrumbs
+              childCategory={subCategories}
+              parentCategory="Design"
+            />
             <CategoryDropDown />
             <Fade left delay={100}>
               <Statistics />

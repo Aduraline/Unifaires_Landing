@@ -10,9 +10,10 @@ const BreadCrumbStyles = styled.div`
   .category-nav {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    gap: 1.5rem;
     background: white;
     height: 112px;
+    padding: 0 15px;
 
     filter: drop-shadow(0px 4px 8px rgba(182, 182, 182, 0.15));
     .main-category {
@@ -40,35 +41,32 @@ const BreadCrumbStyles = styled.div`
     }
   }
 `;
-export default function BreadCrums() {
+export default function BreadCrums({
+  childCategory,
+  parentCategory,
+  subParentCategory,
+}) {
   return (
     <BreadCrumbStyles>
       <div className="category-nav">
         <div className="main-category">
-          <p>Design</p>
+          <p>{parentCategory}</p>
         </div>
         <NextImage src={BreadIcon} alt="image" />
-        <div className="category">
-          <p>Web Design</p>
-        </div>
-        <div className="category">
-          <p>Graphic Design & Illustration</p>
-        </div>
-        <div className="category">
-          <p>Design Tools</p>
-        </div>
-        <div className="category">
-          <p>User Experience Design</p>
-        </div>
-        <div className="category">
-          <p>Game Design</p>
-        </div>
-        <div className="category">
-          <p>3D & Animation</p>
-        </div>
-        <div className="category">
-          <p>Fashion Design</p>
-        </div>
+        {subParentCategory && (
+          <>
+            <div className="main-category">
+              <p>{subParentCategory}</p>
+            </div>
+            <NextImage src={BreadIcon} alt="image" />
+          </>
+        )}
+
+        {childCategory.map((item, idx) => (
+          <div key={`child${idx}`} className="category">
+            <p>{item}</p>
+          </div>
+        ))}
       </div>
     </BreadCrumbStyles>
   );

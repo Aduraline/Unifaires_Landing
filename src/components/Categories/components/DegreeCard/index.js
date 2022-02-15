@@ -1,6 +1,7 @@
 import NextImage from "common/components/NextImage";
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
 // icon
 import degreeImage from "../../../../public/images/degreecard.svg";
 import time from "../../../../public/images/time.svg";
@@ -142,7 +143,9 @@ export default function Card() {
           </div>
         </div>
       </div>
-      <button className="default-btn">Find out more</button>
+      <Link href="/course/7377373883">
+        <button className="default-btn">Find out more</button>
+      </Link>
     </CardStyles>
   );
 }
