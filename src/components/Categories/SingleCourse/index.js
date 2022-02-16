@@ -4,6 +4,7 @@ import styled from "styled-components";
 import AccordionMargin from "common/components/Accordion";
 import ClickableChips from "common/components/Chips";
 import SecondaryChips from "common/components/SecondaryChip";
+import FilterCard from "../components/FilterCard";
 
 const SingleCourseStyles = styled.div`
   .main-section {
@@ -220,12 +221,11 @@ export default function SingleCourse() {
           </div>
 
           <div className="right-section">
-            <h5>yoo i'm the card</h5>
+            <FilterCard />
           </div>
         </div>
       </div>
       {/* 3.  Similar Courses section */}
-      {/* 4.  footer and header section */}
     </SingleCourseStyles>
   );
 }

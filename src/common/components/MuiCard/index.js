@@ -85,6 +85,7 @@ const CardStyles = styled.div`
       max-width: 384px;
       padding: 24px;
       gap: 10px;
+      padding-bottom: 44px;
     }
   }
 `;

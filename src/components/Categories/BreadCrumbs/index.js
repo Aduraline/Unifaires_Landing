@@ -19,7 +19,7 @@ const BreadCrumbStyles = styled.div`
     .main-category {
       p {
         font-weight: bold;
-        font-size: 24px;
+        font-size: 20px;
         color: #5832da;
         cursor: pointer;
       }
