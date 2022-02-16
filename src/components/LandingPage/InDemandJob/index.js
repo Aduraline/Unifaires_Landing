@@ -3,9 +3,8 @@ import styled from "styled-components";
 import dynamic from "next/dynamic";
 const OwlCarousel = dynamic(import("react-owl-carousel3"));
 import Fade from "react-reveal/Fade";
-
+import JobCard from "../../../common/components/MuiCard";
 import { Heading, HeadingText, Text } from "common/style";
-import JobCard from "./Card";
 
 const ContainerStyle = styled.div`
   background: white;
@@ -27,7 +26,6 @@ const FlexContainer = styled.div`
 
 const ChooseUs = () => {
   return (
-    // FIXME:  Add reusable components make it more clean just use the props
     <ContainerStyle className="container ptb-100">
       <HeadingText>In-Demand Jobs</HeadingText>
       <FlexContainer>
@@ -49,6 +47,8 @@ const ChooseUs = () => {
           desc=" Philosophy and Theology brings together some of the most
         important approaches to understanding and assessing the
         intellectual claims of religion."
+          bg="left"
+          callToAction="Apply Now"
         />
 
         <JobCard
@@ -59,6 +59,7 @@ const ChooseUs = () => {
         important approaches to understanding and assessing the
         intellectual claims of religion."
           bg="center"
+          callToAction="Apply Now"
         />
 
         <JobCard
@@ -69,6 +70,7 @@ const ChooseUs = () => {
         anthropological perspective considering theoretical approaches
         and practical applications will be supplemented."
           bg="right"
+          callToAction="Apply Now"
         />
         <JobCard
           image="./images/cardthree.svg"
@@ -78,6 +80,7 @@ const ChooseUs = () => {
         anthropological perspective considering theoretical approaches
         and practical applications will be supplemented."
           bg="right"
+          callToAction="Apply Now"
         />
         <JobCard
           image="./images/cardthree.svg"
@@ -87,6 +90,7 @@ const ChooseUs = () => {
         anthropological perspective considering theoretical approaches
         and practical applications will be supplemented."
           bg="right"
+          callToAction="Apply Now"
         />
       </div>
     </ContainerStyle>

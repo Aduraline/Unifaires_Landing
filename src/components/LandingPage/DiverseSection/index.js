@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
-
+import DiverseCard from "../../../common/components/MuiCard";
 import { Heading, HeadingText, Text } from "common/style";
-import DiverseCard from "./Card";
 
 const ContainerStyle = styled.div`
   background: white;
@@ -26,7 +25,7 @@ const FlexContainer = styled.div`
 
 const DiverseSection = () => {
   return (
-    <ContainerStyle className=" pt-30 container">
+    <ContainerStyle className="container">
       <HeadingText>A diverse selection of courses</HeadingText>
       <Fade up delay={100}>
         <FlexContainer>
@@ -42,7 +41,7 @@ const DiverseSection = () => {
         </FlexContainer>
       </Fade>
 
-      <div className="diverse_section   pt-45">
+      <div className="diverse_section">
         <DiverseCard
           // TODO: add all the props
           title="Philosophy and Theology"
@@ -51,6 +50,8 @@ const DiverseSection = () => {
         approaches to understanding and assessing the intellectual claims of
         religion."
           button="Oxford University"
+          bg="left"
+          callToAction="Enroll Now - 17€"
         />
 
         <DiverseCard
@@ -62,6 +63,7 @@ const DiverseSection = () => {
         religion."
           bg="center"
           button="Oxford University"
+          callToAction="Enroll Now - 7€"
         />
 
         <DiverseCard
@@ -73,6 +75,7 @@ const DiverseSection = () => {
           and practical applications will be supplemented."
           bg="right"
           button="Sewanee University"
+          callToAction="Enroll Now - 4€"
         />
 
         <DiverseCard
@@ -84,6 +87,7 @@ const DiverseSection = () => {
           and practical applications will be supplemented."
           bg="right"
           button="Sewanee University"
+          callToAction="Enroll Now - 5€"
         />
         <DiverseCard
           // TODO: add all the props
@@ -94,6 +98,7 @@ const DiverseSection = () => {
           and practical applications will be supplemented."
           bg="right"
           button="Sewanee University"
+          callToAction="Enroll Now - 4€"
         />
       </div>
     </ContainerStyle>
