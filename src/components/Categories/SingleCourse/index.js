@@ -1,13 +1,9 @@
 import React from "react";
 import Head from "next/head";
 import styled from "styled-components";
-import BreadCrums from "../BreadCrumbs";
-import { subCategoryCourse } from "common/data/categoryData";
-import Accordion from "common/components/Accordion";
 import AccordionMargin from "common/components/Accordion";
 import ClickableChips from "common/components/Chips";
 import SecondaryChips from "common/components/SecondaryChip";
-import Navbar from "common/components/Navbar";
 
 const SingleCourseStyles = styled.div`
   .main-section {
