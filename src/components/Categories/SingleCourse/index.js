@@ -5,153 +5,17 @@ import AccordionMargin from "common/components/Accordion";
 import ClickableChips from "common/components/Chips";
 import SecondaryChips from "common/components/SecondaryChip";
 import FilterCard from "../components/FilterCard";
-
-const SingleCourseStyles = styled.div`
-  .main-section {
-    background: #f3f5f7;
-    border-radius: 32px;
-
-    .title-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 64px;
-
-      .brand-section {
-        display: flex;
-        align-items: end;
-        gap: 32px;
-
-        h6 {
-          font-weight: 600;
-          font-size: 30px;
-          color: #12355b;
-        }
-      }
-
-      .call-to-action {
-        display: flex;
-        align-items: center;
-        gap: 18px;
-
-        .secondary-button {
-          border-radius: 8px;
-          background: rgba(18, 53, 91, 0.05);
-          color: #5832da;
-          border: 1px solid #5832da;
-        }
-
-        button {
-          width: 192px;
-          height: 48px;
-          background: #5832da;
-          border-radius: 8px;
-          border: none;
-          color: #fff;
-          font-weight: 500;
-          -webkit-transition: 0.5s;
-          &:hover {
-            -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
-            cursor: pointer;
-          }
-        }
-      }
-    }
-    .inner-wrapper {
-      padding-right: 64px;
-      padding-left: 64px;
-      display: grid;
-      grid-template-columns: 3fr 1fr;
-      gap: 30px;
-
-      /* left section */
-      .left-section {
-        h6 {
-          font-weight: bold;
-          font-size: 32px;
-          color: #5832da;
-        }
-        .pills {
-          display: flex;
-          gap: 16px;
-          margin-bottom: 48px;
-        }
-
-        .desc {
-          p {
-            font-size: 16px;
-            line-height: 180%;
-            color: #4d4d4d;
-          }
-          span {
-            font-weight: bold;
-            font-size: 20px;
-          }
-        }
-
-        .accordion-main {
-          background: rgba(238, 234, 251, 0.5);
-          border-radius: 8px 12px 12px 8px;
-          height: 346px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          padding: 20px;
-          border-left: 8px solid #5832da;
-          margin-bottom: 96px;
-        }
-
-        .accordion__header {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding-top: 40px;
-          margin-bottom: 16px;
-
-          h5 {
-            font-size: 16px;
-            line-height: 120%;
-            color: #ada8be;
-          }
-          .lesson-info {
-            display: flex;
-            align-items: baseline;
-            gap: 16px;
-            .number_of_lessons {
-              display: flex;
-              align-items: center;
-              gap: 10px;
-              p {
-                font-size: 12px;
-                line-height: 120%;
-                color: #000000;
-              }
-            }
-            .duration_for_lesson {
-              display: flex;
-              align-items: center;
-              gap: 10px;
-              p {
-                font-size: 12px;
-                line-height: 120%;
-                color: #000000;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`;
+import DegreeCard from "../components/DegreeCard";
+import JobCard from "../components/JobCard";
+import { SingleCourseStyles } from "./SingleCourse.Styles";
 
 export default function SingleCourse() {
   return (
-    <SingleCourseStyles>
+    <SingleCourseStyles className="container">
       <Head>
         <title>Unifaires| Course name </title>
       </Head>
-      <div className="main-section container">
+      <section>
         <div className="title-wrapper">
           <div className="brand-section">
             <img src="../images/ms.svg" alt="" />
@@ -163,6 +27,7 @@ export default function SingleCourse() {
             <button className="default-btn">Buy Now</button>
           </div>
         </div>
+
         <div className="inner-wrapper">
           <div className="left-section">
             <h6>JavaScript Complete Beginners Course For Web 2.0</h6>
@@ -182,25 +47,32 @@ export default function SingleCourse() {
                 skill, achievement, and contribution. Earn and share your badge
                 today!
               </p>
-
               <span>What you’ll learn:</span>
-              <p>
-                * Design responsive and accessible experiences that work across
-                multiple platforms.
-                <br />
-                * Become an authority on our visual design language, extending
-                upon our existing systems—such as our color system, navigation
-                components, and interaction patterns.
-                <br />
-                * Provide regular design feedback and direction to your
-                coworkers.
-                <br />
-                * Seek out opportunities for connecting with people and teams
-                working on related projects.
-                <br />* Build meaningful relationships across the product,
-                engineering, and other cross-functional partners you're working
-                with.
-              </p>
+              <ul>
+                <li>
+                  {" "}
+                  What you’ll learn: Design responsive and accessible
+                  experiences that work across multiple platforms.
+                </li>
+                <li>
+                  Become an authority on our visual design language, extending
+                  upon our existing systems—such as our color system, navigation
+                  components, and interaction patterns.
+                </li>
+                <li>
+                  Provide regular design feedback and direction to your
+                  coworkers.
+                </li>
+                <li>
+                  Seek out opportunities for connecting with people and teams
+                  working on related projects.
+                </li>
+                <li>
+                  Build meaningful relationships across the product,
+                  engineering, and other cross-functional partners you're
+                  working with.
+                </li>
+              </ul>
             </div>
             <div className="accordion__header">
               <h5>LESSONS</h5>
@@ -224,8 +96,38 @@ export default function SingleCourse() {
             <FilterCard />
           </div>
         </div>
+      </section>
+
+      {/* similar course section */}
+
+      <div className="similar__course container">
+        <div className="header">
+          <h6>Similar Courses</h6>
+          <p>
+            View All <i class="ri-arrow-right-s-line"></i>
+          </p>
+        </div>
+        <div className="card-section">
+          <DegreeCard />
+          <DegreeCard />
+          <DegreeCard />
+        </div>
       </div>
-      {/* 3.  Similar Courses section */}
+
+      {/* Recommended Jobs */}
+      <div className="similar__course container">
+        <div className="header">
+          <h6>Recommended Jobs</h6>
+          <p>
+            View All <i class="ri-arrow-right-s-line"></i>
+          </p>
+        </div>
+        <div className="card-section">
+          <JobCard />
+          <JobCard />
+          <JobCard />
+        </div>
+      </div>
     </SingleCourseStyles>
   );
 }

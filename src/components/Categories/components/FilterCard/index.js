@@ -34,15 +34,10 @@ const FilterCardStyles = styled.div`
 
     .job-skills {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 14px;
-      overflow-x: scroll;
-      ::-webkit-scrollbar {
-      width: 100px; /* Remove scrollbar space */
-      background: transparent; /* Optional: just make scrollbar invisible */\
+      margin-bottom: 48px;
 
-      padding-bottom: 32px;
-    }
       .skill {
         background: #5832da;
         border-radius: 36px;
@@ -51,7 +46,6 @@ const FilterCardStyles = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
-        min-width: 285px;
 
         h6 {
           font-weight: bold;
@@ -62,13 +56,22 @@ const FilterCardStyles = styled.div`
           padding: 0 10px 0 10px;
         }
       }
+
+      .light {
+        background: #eeeafb !important;
+        border-radius: 36px;
+        h6 {
+          color: #5832da;
+          text-transform: capitalize;
+        }
+      }
     }
 
-    }
     .skills-you-have {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 14px;
+
       .skill {
         background: #5832da;
         border-radius: 36px;
@@ -103,7 +106,6 @@ const FilterCardStyles = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
-
 
         h6 {
           font-weight: bold;
@@ -196,23 +198,28 @@ export default function FilterCard() {
             </div>
           </div>
 
-          <Typography variant="h6">
-            Job skills you can apply for after study
-          </Typography>
+          <Typography variant="h6">SKILL GAPS IN SELECTED JOB ROLE</Typography>
           <div className="job-skills">
-            <div className="skill">
-              <h6>Web Developer</h6>
+            <div className="skill light">
+              <h6>CSS</h6>
             </div>
-            <div className="skill">
-              <h6>Frontend Engineer</h6>
+            <div className="skill light">
+              <h6>JQuery</h6>
             </div>
-
-            <div className="skill">
-              <h6>Front-end testing and QA engineer</h6>
+            <div className="skill light">
+              <h6>React</h6>
             </div>
-
-            <div className="skill">
-              <h6>Frontend Engineer</h6>
+            <div className="skill light">
+              <h6>Node.js</h6>
+            </div>
+            <div className="skill light">
+              <h6>Vue</h6>
+            </div>
+            <div className="skill light">
+              <h6>Python</h6>
+            </div>
+            <div className="skill light">
+              <h6>MySQL</h6>
             </div>
           </div>
         </CardContent>

@@ -110,7 +110,7 @@ const CardStyles = styled.div`
     }
   }
 `;
-export default function Card() {
+export default function DegreeCard() {
   return (
     <CardStyles>
       <div className="card__image">

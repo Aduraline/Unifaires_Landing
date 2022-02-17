@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade";
 // icon
 import SettingIcon from "../../../public/images/Setting.svg";
 import Dropdown from "../Dropdown";
-import Card from "../components/Card";
+import JobCard from "../components/JobCard";
 
 const ResultStyles = styled.div`
   margin-bottom: 70px;
@@ -133,15 +133,15 @@ export default function index() {
       <div className="result-section">
         {/* build  card component and reuse it */}
         <Fade up delay={100}>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <JobCard />
+          <JobCard />
+          <JobCard />
+          <JobCard />
+          <JobCard />
+          <JobCard />
+          <JobCard />
+          <JobCard />
+          <JobCard />
         </Fade>
       </div>
     </ResultStyles>
