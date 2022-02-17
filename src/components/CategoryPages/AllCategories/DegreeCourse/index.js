@@ -2,12 +2,10 @@ import NextImage from "common/components/NextImage";
 import styled from "styled-components";
 import { Input, Label } from "reactstrap";
 import Fade from "react-reveal/Fade";
-// icon
-import SettingIcon from "../../../public/images/Setting.svg";
-import Dropdown from "../Dropdown";
-import FundingItem from "../components/FundingItem";
+import Dropdown from "../../../../common/components/Dropdown";
+import DegreeCard from "common/components/DegreeCard";
 
-const FundingStyles = styled.div`
+const DegreeCourseStyles = styled.div`
   margin-bottom: 70px;
   padding-top: 50px;
   .header {
@@ -84,18 +82,17 @@ const FundingStyles = styled.div`
   }
   .result-section {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     @media screen {
     }
     grid-gap: 40px;
   }
 `;
-
-export default function index() {
+export default function DegreeCourse() {
   return (
-    <FundingStyles className="container">
+    <DegreeCourseStyles className="container">
       <div className="header">
-        <h1>Funding, Grants & Scholarships</h1>
+        <h1>Degree, Courses & Certifications</h1>
       </div>
       <div className="subheaderWrapper">
         <h6>
@@ -104,18 +101,20 @@ export default function index() {
         </h6>
         <div className="right-section">
           <Label for="exampleCustomSwitch" className="form-check-label">
-            <p>Certifications and Licenses Alerts</p>
+            <p>Short Courses Alerts</p>
           </Label>
           <div className="form-check form-switch">
             <Input type="switch" name="customSwitch" id="exampleCustomSwitch" />
           </div>
-          <NextImage src={SettingIcon} />
+          <img src="../image/Setting.svg" alt="image" />
         </div>
       </div>
       <div className="filter-section">
-        <Dropdown title="area of focus" />
-        <Dropdown title="vendor" />
-        <Dropdown title="training & exam reg." />
+        <Dropdown title="course TITLE" />
+        <Dropdown title="course level" />
+        <Dropdown title="course MODE" />
+        <Dropdown title="EXPERTISE & SKILLS" />
+        <Dropdown title="SKILL MODE" />
         <Dropdown title="Language" />
       </div>
       <div className="pagination">
@@ -133,21 +132,14 @@ export default function index() {
       <div className="result-section">
         {/* build  card component and reuse it */}
         <Fade up delay={100}>
-          {/* FIXME: Build th funding area card or rather list section */}
-          <FundingItem />
-          <FundingItem />
-          <FundingItem />
-          <FundingItem />
-          <FundingItem />
-          <FundingItem />
-          <FundingItem />
-          <FundingItem />
-          <FundingItem />
-          <FundingItem />
-          <FundingItem />
-          <FundingItem />
+          <DegreeCard />
+          <DegreeCard />
+          <DegreeCard />
+          <DegreeCard />
+          <DegreeCard />
+          <DegreeCard />
         </Fade>
       </div>
-    </FundingStyles>
+    </DegreeCourseStyles>
   );
 }

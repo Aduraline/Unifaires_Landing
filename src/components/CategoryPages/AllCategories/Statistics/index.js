@@ -1,5 +1,5 @@
 import React from "react";
-import Progress from "../components/Progess";
+import Progress from "../../../../common/components/Progess";
 
 export default function index() {
   return (

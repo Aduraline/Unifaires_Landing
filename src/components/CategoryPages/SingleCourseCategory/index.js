@@ -4,9 +4,9 @@ import styled from "styled-components";
 import AccordionMargin from "common/components/Accordion";
 import ClickableChips from "common/components/Chips";
 import SecondaryChips from "common/components/SecondaryChip";
-import FilterCard from "../components/FilterCard";
-import DegreeCard from "../components/DegreeCard";
-import JobCard from "../components/JobCard";
+import FilterCard from "../../../common/components/FilterCard";
+import DegreeCard from "../../../common/components/DegreeCard";
+import JobCard from "../../../common/components/JobCard";
 import { SingleCourseStyles } from "./SingleCourse.Styles";
 
 export default function SingleCourse() {

@@ -49,6 +49,7 @@ const ChooseUs = () => {
         intellectual claims of religion."
           bg="left"
           callToAction="Apply Now"
+          stats="42 Applicants"
         />
 
         <JobCard
@@ -60,6 +61,7 @@ const ChooseUs = () => {
         intellectual claims of religion."
           bg="center"
           callToAction="Apply Now"
+          stats="4 Applicants"
         />
 
         <JobCard
@@ -71,6 +73,7 @@ const ChooseUs = () => {
         and practical applications will be supplemented."
           bg="right"
           callToAction="Apply Now"
+          stats="242 Applicants"
         />
         <JobCard
           image="./images/cardthree.svg"
@@ -81,6 +84,7 @@ const ChooseUs = () => {
         and practical applications will be supplemented."
           bg="right"
           callToAction="Apply Now"
+          stats="420 Applicants"
         />
         <JobCard
           image="./images/cardthree.svg"
@@ -91,6 +95,7 @@ const ChooseUs = () => {
         and practical applications will be supplemented."
           bg="right"
           callToAction="Apply Now"
+          stats="402 Applicants"
         />
       </div>
     </ContainerStyle>

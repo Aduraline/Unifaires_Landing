@@ -7,14 +7,14 @@ import Fade from "react-reveal/Fade";
 import GlobalStyle, {
   AppWrapper,
   ContentWrapper,
-} from "components/Categories/CategoriesStyles";
+} from "components/CategoryPages/CategoriesStyles";
 import { DrawerProvider } from "common/contexts/DrawerContext";
-import NavBar from "components/LandingPage/NavBar";
+import NavBar from "common/components/NavBar";
 import Footer from "components/LandingPage/Footer";
-import SingleCourse from "components/Categories/SingleCourse";
+import SingleCourse from "components/CategoryPages/SingleCourseCategory";
 import React from "react";
 import { subCategoryCourse } from "common/data/categoryData";
-import BreadCrums from "components/Categories/BreadCrumbs";
+import BreadCrumbs from "common/components/BreadCrumbs";
 
 export default function SingleCoursePage() {
   return (
@@ -27,7 +27,7 @@ export default function SingleCoursePage() {
             <NavBar />
           </DrawerProvider>
           <ContentWrapper>
-            <BreadCrums
+            <BreadCrumbs
               childCategory={subCategoryCourse}
               parentCategory="Design"
               subParentCategory="Web Design"

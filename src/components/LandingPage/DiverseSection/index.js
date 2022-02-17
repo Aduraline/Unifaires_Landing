@@ -52,6 +52,7 @@ const DiverseSection = () => {
           button="Oxford University"
           bg="left"
           callToAction="Enroll Now - 17€"
+          stats="5K+ Registered"
         />
 
         <DiverseCard
@@ -64,6 +65,7 @@ const DiverseSection = () => {
           bg="center"
           button="Oxford University"
           callToAction="Enroll Now - 7€"
+          stats="50+ Registered"
         />
 
         <DiverseCard
@@ -76,6 +78,7 @@ const DiverseSection = () => {
           bg="right"
           button="Sewanee University"
           callToAction="Enroll Now - 4€"
+          stats="5K+ Registered"
         />
 
         <DiverseCard
@@ -88,6 +91,7 @@ const DiverseSection = () => {
           bg="right"
           button="Sewanee University"
           callToAction="Enroll Now - 5€"
+          stats="500K+ Registered"
         />
         <DiverseCard
           // TODO: add all the props
@@ -99,6 +103,7 @@ const DiverseSection = () => {
           bg="right"
           button="Sewanee University"
           callToAction="Enroll Now - 4€"
+          stats="1K+ Registered"
         />
       </div>
     </ContainerStyle>

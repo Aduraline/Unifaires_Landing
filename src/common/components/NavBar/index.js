@@ -24,12 +24,12 @@ import Drawer from "common/components/Drawer";
 import { androidClose } from "react-icons-kit/ionicons/androidClose";
 import ScrollSpyMenu from "common/components/ScrollSpyMenu";
 import { Icon } from "react-icons-kit";
-import SearchPanel from "../SearchPanel";
+import SearchPanel from "../../../components/LandingPage/SearchPanel";
 import { openModal, closeModal } from "@redq/reuse-modal";
 import { menuData } from "common/data/Interior";
 import lang from "../../../public/images/home-two/lang.svg";
 import globe from "../../../public/images/home-two/glob.svg";
-import ServiceDropDown from "../DropDownMenu";
+import ServiceDropDown from "../../../components/LandingPage/DropDownMenu";
 import useToggle from "common/hooks/useToggle";
 import Link from "next/link";
 
@@ -262,7 +262,6 @@ const NavBar = () => {
             />
           </NavLink>
 
-          <NavLink>Unifairs Bussiness</NavLink>
           <NavLink>About</NavLink>
           <NavLink>Pricing</NavLink>
           <Link href="/contact">

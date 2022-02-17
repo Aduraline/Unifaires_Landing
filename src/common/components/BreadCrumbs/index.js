@@ -1,8 +1,5 @@
-import NextImage from "common/components/NextImage";
 import React from "react";
 import styled from "styled-components";
-// icon
-import BreadIcon from "../../../public/images/bread.svg";
 
 const BreadCrumbStyles = styled.div`
   padding-top: 100px;
@@ -41,7 +38,7 @@ const BreadCrumbStyles = styled.div`
     }
   }
 `;
-export default function BreadCrums({
+export default function BreadCrumbs({
   childCategory,
   parentCategory,
   subParentCategory,
@@ -52,13 +49,13 @@ export default function BreadCrums({
         <div className="main-category">
           <p>{parentCategory}</p>
         </div>
-        <NextImage src={BreadIcon} alt="image" />
+        <img src="../images/bread.svg" alt="image" />
         {subParentCategory && (
           <>
             <div className="main-category">
               <p>{subParentCategory}</p>
             </div>
-            <NextImage src={BreadIcon} alt="image" />
+            <img src="../images/bread.svg" alt="image" />
           </>
         )}
 

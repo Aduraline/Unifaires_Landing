@@ -52,7 +52,7 @@ const CardStyles = styled.div`
     }
     .apply-btn {
       border: none;
-      width: 220px;
+      min-width: 200px;
       height: 48px;
       background: #5832da;
       border-radius: 8px;
@@ -81,11 +81,18 @@ const CardStyles = styled.div`
     .MuiCardActions-root {
       display: flex;
       align-items: center;
+      padding: 0 20px 0 20px;
       justify-content: space-between;
-      max-width: 384px;
-      padding: 24px;
-      gap: 10px;
-      padding-bottom: 44px;
+      padding-bottom: 30px;
+    }
+
+    .left-wrapper {
+      p {
+        font-size: 16px;
+        line-height: 150%;
+        color: #12355b;
+        font-weight: 500;
+      }
     }
   }
 `;
@@ -97,6 +104,7 @@ export default function ImgMediaCard({
   bg,
   button,
   callToAction,
+  stats,
 }) {
   return (
     <CardStyles>
@@ -115,7 +123,7 @@ export default function ImgMediaCard({
         </CardContent>
         <CardActions>
           <div className="left-wrapper">
-            <p>40 Applicants</p>
+            <p>{stats}</p>
             <img src="./images/adoptionImage.svg" alt="image" />
           </div>
           <Button size="small" className="apply-btn default-btn">

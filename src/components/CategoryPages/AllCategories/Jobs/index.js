@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { Input, Label } from "reactstrap";
 import Fade from "react-reveal/Fade";
 // icon
-import SettingIcon from "../../../public/images/Setting.svg";
-import Dropdown from "../Dropdown";
-import JobCard from "../components/JobCard";
+// import SettingIcon from "../../../public/images/Setting.svg";
+import Dropdown from "../../../../common/components/Dropdown";
+import JobCard from "../../../../common/components/JobCard";
 
 const ResultStyles = styled.div`
   margin-bottom: 70px;
@@ -108,7 +108,7 @@ export default function index() {
           <div className="form-check form-switch">
             <Input type="switch" name="customSwitch" id="exampleCustomSwitch" />
           </div>
-          <NextImage src={SettingIcon} />
+          {/* <NextImage src={SettingIcon} /> */}
         </div>
       </div>
       <div className="filter-section">

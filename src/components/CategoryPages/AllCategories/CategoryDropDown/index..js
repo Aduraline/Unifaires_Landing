@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Dropdown from "../Dropdown";
+import Dropdown from "../../../../common/components/Dropdown";
 
 const CategoryStyles = styled.div`
   padding-bottom: 50px;
@@ -11,7 +11,7 @@ const CategoryStyles = styled.div`
   }
 `;
 
-export default function index() {
+export default function CategoryDropDown() {
   return (
     <CategoryStyles className="container ">
       {/* TODO: Add the drop down section */}
