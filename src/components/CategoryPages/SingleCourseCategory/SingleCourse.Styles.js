@@ -83,10 +83,12 @@ export const SingleCourseStyles = styled.div`
             color: #4d4d4d;
           }
           li {
-            font-weight: 600;
             font-size: 16px;
             color: #12355b;
-            list-style: inside;
+            list-style: none;
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
           }
           span {
             font-weight: bold;

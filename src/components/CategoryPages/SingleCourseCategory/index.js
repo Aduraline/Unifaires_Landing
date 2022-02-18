@@ -8,6 +8,7 @@ import FilterCard from "../../../common/components/FilterCard";
 import DegreeCard from "../../../common/components/DegreeCard";
 import JobCard from "../../../common/components/JobCard";
 import { SingleCourseStyles } from "./SingleCourse.Styles";
+import SignInModal from "common/components/SignInModal";
 
 export default function SingleCourse() {
   return (
@@ -27,6 +28,8 @@ export default function SingleCourse() {
             <button className="default-btn">Buy Now</button>
           </div>
         </div>
+
+        <SignInModal />
 
         <div className="inner-wrapper">
           <div className="left-section">
@@ -50,24 +53,28 @@ export default function SingleCourse() {
               <span>What you’ll learn:</span>
               <ul>
                 <li>
-                  {" "}
+                  <span>•</span>
                   What you’ll learn: Design responsive and accessible
                   experiences that work across multiple platforms.
                 </li>
                 <li>
+                  <span>•</span>
                   Become an authority on our visual design language, extending
                   upon our existing systems—such as our color system, navigation
                   components, and interaction patterns.
                 </li>
                 <li>
+                  <span>•</span>
                   Provide regular design feedback and direction to your
                   coworkers.
                 </li>
                 <li>
+                  <span>•</span>
                   Seek out opportunities for connecting with people and teams
                   working on related projects.
                 </li>
                 <li>
+                  <span>•</span>
                   Build meaningful relationships across the product,
                   engineering, and other cross-functional partners you're
                   working with.
