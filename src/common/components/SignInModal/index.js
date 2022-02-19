@@ -30,7 +30,7 @@ const SignModalStyles = styled.div`
     font-size: 36px;
     text-align: center;
     color: #5832da;
-    padding: 0 96px 0 96px;
+    padding: 0 40px 0 40px;
     margin-bottom: 48px;
   }
 
@@ -94,7 +94,9 @@ export default function SignInModal() {
               </Link>
             </div>
 
-            <header>Sign Up to start this course and many more</header>
+            <header>
+              Sign In to get limitless information at your fingertips
+            </header>
             <div className="button_wrapper">
               <Link href="/signup">
                 <Button create className="default-btn">
