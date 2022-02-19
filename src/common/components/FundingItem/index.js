@@ -37,7 +37,7 @@ export default function index() {
     <FundingItemStyles>
       <div className="header-wrapper">
         <div className="left-section">
-          <img src="./image/item.svg" alt="image" />
+          <img src="../images/item.svg" alt="image" />
         </div>
         <div className="right-section">
           <h6>IBM TechU - IBM Power10</h6>

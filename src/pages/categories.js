@@ -61,9 +61,9 @@ export default function CategoriesPage() {
               parentCategory="Design"
             />
             <CategoryDropDown />
-            <Fade left delay={100}>
-              <Statistics />
-            </Fade>
+
+            <Statistics />
+
             <Jobs />
             <DegreeCourse />
             <Funding />
