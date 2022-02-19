@@ -15,28 +15,31 @@ import SingleCourse from "components/CategoryPages/SingleCourseCategory";
 import React from "react";
 import { subCategoryCourse } from "common/data/categoryData";
 import BreadCrumbs from "common/components/BreadCrumbs";
+import PleaseSignIn from "components/CategoryPages/AllCategories/PleaseSignIn";
 
 export default function SingleCoursePage() {
   return (
     <ThemeProvider theme={theme}>
-      <Fragment>
-        <ResetCSS />
-        <GlobalStyle />
-        <AppWrapper>
-          <DrawerProvider>
-            <NavBar />
-          </DrawerProvider>
-          <ContentWrapper>
-            <BreadCrumbs
-              childCategory={subCategoryCourse}
-              parentCategory="Design"
-              subParentCategory="Web Design"
-            />
-            <SingleCourse />
-          </ContentWrapper>
-          <Footer />
-        </AppWrapper>
-      </Fragment>
+      <PleaseSignIn>
+        <Fragment>
+          <ResetCSS />
+          <GlobalStyle />
+          <AppWrapper>
+            <DrawerProvider>
+              <NavBar />
+            </DrawerProvider>
+            <ContentWrapper>
+              <BreadCrumbs
+                childCategory={subCategoryCourse}
+                parentCategory="Design"
+                subParentCategory="Web Design"
+              />
+              <SingleCourse />
+            </ContentWrapper>
+            <Footer />
+          </AppWrapper>
+        </Fragment>
+      </PleaseSignIn>
     </ThemeProvider>
   );
 }

@@ -24,13 +24,10 @@ import Drawer from "common/components/Drawer";
 import { androidClose } from "react-icons-kit/ionicons/androidClose";
 import ScrollSpyMenu from "common/components/ScrollSpyMenu";
 import { Icon } from "react-icons-kit";
-import SearchPanel from "../../../components/LandingPage/SearchPanel";
-import { openModal, closeModal } from "@redq/reuse-modal";
 import { menuData } from "common/data/Interior";
 import lang from "../../../public/images/home-two/lang.svg";
 import globe from "../../../public/images/home-two/glob.svg";
 import ServiceDropDown from "../../../components/LandingPage/DropDownMenu";
-import useToggle from "common/hooks/useToggle";
 import Link from "next/link";
 
 const DropdownMenu = styled(UIMenu)`
@@ -142,52 +139,8 @@ const SearchButton = styled(Button)`
   padding: 10px; ;
 `;
 
-const CloseModalButtonAlt = () => (
-  <Button
-    className="modalCloseBtn alt"
-    variant="fab"
-    onClick={() => closeModal()}
-    icon={<i className="flaticon-plus-symbol" />}
-  />
-);
-
 const NavBar = () => {
-  const [sticky, setSticky] = useState(false);
   const { state, dispatch } = useContext(DrawerContext);
-
-  //sticky menu
-  const showStickyMenu = () => {
-    if (window.scrollY >= 80) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
-  };
-  if (typeof window !== "undefined") {
-    // browser code
-    window.addEventListener("scroll", showStickyMenu);
-  }
-  const handleSearchModal = () => {
-    openModal({
-      config: {
-        className: "search-modal",
-        disableDragging: true,
-        width: "90%",
-        height: "100%",
-        animationFrom: { transform: "translateY(100px)" },
-        animationTo: { transform: "translateY(0)" },
-        transition: {
-          mass: 1,
-          tension: 180,
-          friction: 26,
-        },
-      },
-      component: SearchPanel,
-      componentProps: {},
-      closeComponent: CloseModalButtonAlt,
-      closeOnClickOutside: true,
-    });
-  };
 
   const toggleHandler = () => {
     dispatch({
@@ -205,7 +158,6 @@ const NavBar = () => {
 
         <SearchButton
           variant="textButton"
-          onClick={handleSearchModal}
           icon={<i className="flaticon-magnifying-glass" />}
           aria-label="search button"
         />
@@ -245,7 +197,6 @@ const NavBar = () => {
                 type="search"
                 className="form-control"
                 placeholder="Search for anything "
-                // onClick={handleSearchModal}
               />
               <button type="button">
                 <i className="ri-search-line"></i>

@@ -29,8 +29,6 @@ export default function SingleCourse() {
           </div>
         </div>
 
-        <SignInModal />
-
         <div className="inner-wrapper">
           <div className="left-section">
             <h6>JavaScript Complete Beginners Course For Web 2.0</h6>

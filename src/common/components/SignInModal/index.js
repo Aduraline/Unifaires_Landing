@@ -24,14 +24,6 @@ const SignModalStyles = styled.div`
     justify-content: flex-end;
     cursor: pointer;
     margin-bottom: 48px;
-    button {
-      background: transparent;
-      border: none;
-      -webkit-transition: 0.5s;
-      &:hover {
-        transform: translateY(0) scale(1.2);
-      }
-    }
   }
   header {
     font-weight: bold;
@@ -74,7 +66,11 @@ export default function SignInModal() {
 
   const [open, setOpen] = React.useState(!IsSignIn ? true : false);
   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+
+  const handleClose = (event, reason) => {
+    if (reason && reason == "backdropClick") return;
+    setOpen(false);
+  };
 
   return (
     <div>
@@ -82,9 +78,10 @@ export default function SignInModal() {
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         open={open}
-        onClose={handleClose}
+        // onClose={handleClose}
         closeAfterTransition
         BackdropComponent={Backdrop}
+        disableBackdropClick
         BackdropProps={{
           timeout: 500,
         }}
@@ -92,10 +89,9 @@ export default function SignInModal() {
         <Fade in={open}>
           <SignModalStyles>
             <div className="close_btn">
-              <button onClick={handleClose}>
-                {" "}
+              <Link href="/categories">
                 <img src="../images/close.svg" alt="close btn" />
-              </button>
+              </Link>
             </div>
 
             <header>Sign Up to start this course and many more</header>
