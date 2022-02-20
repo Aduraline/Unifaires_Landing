@@ -110,6 +110,7 @@ const CardStyles = styled.div`
     }
   }
 `;
+
 export default function DegreeCard() {
   return (
     <CardStyles>
