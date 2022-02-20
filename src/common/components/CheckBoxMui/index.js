@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const CheckboxMuiStyles = styled.div`
   .Mui-checked {
-    color: #5832da;
+    color: #5832da !important;
   }
   .MuiLabel-root {
     display: none;

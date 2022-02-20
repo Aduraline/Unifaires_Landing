@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 const RadioStyles = styled.div`
   .Mui-checked {
-    color: #5832da;
+    color: #5832da !important;
   }
 `;
 
