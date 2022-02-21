@@ -113,40 +113,42 @@ const CardStyles = styled.div`
 
 export default function DegreeCard() {
   return (
-    <CardStyles>
-      <div className="card__image">
-        <NextImage src={degreeImage} width={370} />
-      </div>
-      <div className="wrapper">
-        <div className="tag-wrapper">
-          <p>IBM</p>
-          <button>New</button>
+    <>
+      <CardStyles>
+        <div className="card__image">
+          <NextImage src={degreeImage} width={370} />
         </div>
-
-        <header>
-          First Steps in Creating Meaningful Designs for Best Practices
-        </header>
-
-        <div className="desc">
-          First steps in creating meaningful designs for best practices First
-          steps in creating meaningful designs for best practices First steps in
-          creating meaningful designs for best practices
-        </div>
-
-        <div className="duration-wrapper">
-          <div className="weeks">
-            <NextImage src={time} />
-            <p>4 weeks</p>
+        <div className="wrapper">
+          <div className="tag-wrapper">
+            <p>IBM</p>
+            <button>New</button>
           </div>
-          <div className="price">
-            <NextImage src={dollar} />
-            <p>$50</p>
+
+          <header>
+            First Steps in Creating Meaningful Designs for Best Practices
+          </header>
+
+          <div className="desc">
+            First steps in creating meaningful designs for best practices First
+            steps in creating meaningful designs for best practices First steps
+            in creating meaningful designs for best practices
+          </div>
+
+          <div className="duration-wrapper">
+            <div className="weeks">
+              <NextImage src={time} />
+              <p>4 weeks</p>
+            </div>
+            <div className="price">
+              <NextImage src={dollar} />
+              <p>$50</p>
+            </div>
           </div>
         </div>
-      </div>
-      <Link href="/course/7377373883">
-        <button className="default-btn">Find out more</button>
-      </Link>
-    </CardStyles>
+        <Link href="/course/7377373883">
+          <button className="default-btn">Find out more</button>
+        </Link>
+      </CardStyles>
+    </>
   );
 }

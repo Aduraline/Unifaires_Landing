@@ -8,6 +8,7 @@ import Visibility from "@mui/icons-material/Visibility";
 import { LoadingButton } from "@mui/lab";
 import CheckboxMui from "../CheckBoxMui";
 import Link from "next/link";
+import { Button } from "reactstrap";
 
 const FormMuiStyles = styled.div`
   .Mui-focused.MuiInputLabel-root {
@@ -36,16 +37,6 @@ const FormMuiStyles = styled.div`
   }
 `;
 
-const MuiIconButton = styled(IconButton)`
-  margin-top: -20px;
-  display: flex;
-  align-self: start;
-  border-radius: 999px;
-  background: rgba(88, 50, 218, 0.09);
-  color: #5832da;
-  margin-bottom: 100px;
-`;
-
 const StyledDrawer = styled(Drawer)`
   .MuiDrawer-paper {
     width: 450px;
@@ -72,6 +63,16 @@ const StyledDrawer = styled(Drawer)`
         color: rgba(184, 188, 202, 1);
       }
     }
+
+    .MuiIconButton-root {
+      margin-top: -20px;
+      display: flex;
+      align-self: start;
+      border-radius: 999px;
+      background: rgba(88, 50, 218, 0.09);
+      color: #5832da;
+      margin-bottom: 100px;
+    }
   }
 `;
 
@@ -83,7 +84,7 @@ export default function DrawerUiSignUp() {
     right: true,
   });
 
-  const [showPassword, setShowPassword] = React.useState(true);
+  const [showPassword, setShowPassword] = React.useState(false);
 
   const toggleDrawer = (open) => (event) => {
     if (
@@ -104,13 +105,13 @@ export default function DrawerUiSignUp() {
         // onClose={toggleDrawer(false)}
       >
         <Link href="/categories">
-          <MuiIconButton
+          <IconButton
             aria-label="delete"
             onClick={toggleDrawer(false)}
             onKeyDown={toggleDrawer(false)}
           >
             <CloseIcon />
-          </MuiIconButton>
+          </IconButton>
         </Link>
         <h6>
           {" "}
