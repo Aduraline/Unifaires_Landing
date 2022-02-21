@@ -1,3 +1,4 @@
+import DrawerUiSignUp from "common/components/DrawerMui";
 import SignInModal from "common/components/SignInModal";
 import CategoriesPage from "pages/categories";
 import DegreeCourse from "../DegreeCourse";
@@ -7,8 +8,10 @@ export default function PleaseSignIn({ children }) {
   if (!me)
     return (
       <>
+        {/* <CategoriesPage /> */}
+        {/* <SignInModal /> */}
         <DegreeCourse />
-        <SignInModal />
+        <DrawerUiSignUp />
       </>
     );
   return children;

@@ -19,9 +19,7 @@ const CheckboxMuiStyles = styled.div`
   }
 `;
 
-export default function CheckboxMui() {
-  const label = `I agree to the Unifaires
-    Terms of use and Privacy Policy`;
+export default function CheckboxMui({ label }) {
   return (
     <CheckboxMuiStyles>
       <FormGroup>
