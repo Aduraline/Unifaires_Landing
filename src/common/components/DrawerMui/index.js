@@ -29,11 +29,17 @@ const FormMuiStyles = styled.div`
     text-transform: capitalize;
     border-radius: 6px;
     font-weight: 600;
+    &:hover {
+      background: #5832da;
+    }
   }
   .muiLoading_secondary {
     background: rgba(184, 188, 202, 0.1);
     border: #5832da 1px solid;
     color: #5832da;
+    &:hover {
+      background: rgba(184, 188, 202, 0.1);
+    }
   }
 `;
 
@@ -42,6 +48,16 @@ const StyledDrawer = styled(Drawer)`
     width: 450px;
     box-shadow: 5px 0 10px 0 rgb(0 0 0 / 10%);
     padding: 48px;
+
+    .MuiIconButton-root {
+      margin-top: -20px;
+      display: flex;
+      align-self: start;
+      border-radius: 999px;
+      background: rgba(88, 50, 218, 0.09);
+      color: #5832da;
+      margin-bottom: 100px;
+    }
 
     h6 {
       font-weight: 600;
@@ -62,16 +78,6 @@ const StyledDrawer = styled(Drawer)`
       a {
         color: rgba(184, 188, 202, 1);
       }
-    }
-
-    .MuiIconButton-root {
-      margin-top: -20px;
-      display: flex;
-      align-self: start;
-      border-radius: 999px;
-      background: rgba(88, 50, 218, 0.09);
-      color: #5832da;
-      margin-bottom: 100px;
     }
   }
 `;
