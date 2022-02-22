@@ -6,6 +6,8 @@ import Link from "next/link";
 import degreeImage from "../../../../public/images/degreecard.svg";
 import time from "../../../../public/images/time.svg";
 import dollar from "../../../../public/images/Dollar.svg";
+import DrawerUiSignUp from "../DrawerMui";
+import { Button } from "@mui/material";
 
 const CardStyles = styled.div`
   width: 400px;
@@ -53,7 +55,6 @@ const CardStyles = styled.div`
       &:hover {
         -webkit-transform: translateY(-5px);
         transform: translateY(-5px);
-
         cursor: pointer;
       }
     }
@@ -103,7 +104,9 @@ const CardStyles = styled.div`
     font-size: 16px;
     color: #ffffff;
     -webkit-transition: 0.5s;
+    text-transform: capitalize;
     &:hover {
+      background: #5832da;
       -webkit-transform: translateY(-5px);
       transform: translateY(-5px);
       cursor: pointer;
@@ -112,6 +115,9 @@ const CardStyles = styled.div`
 `;
 
 export default function DegreeCard() {
+  // Sign In logics
+
+  const isSignIn = false;
   return (
     <>
       <CardStyles>
@@ -145,9 +151,13 @@ export default function DegreeCard() {
             </div>
           </div>
         </div>
-        <Link href="/course/7377373883">
-          <button className="default-btn">Find out more</button>
-        </Link>
+        {isSignIn ? (
+          <Link href="/course/7377373883">
+            <Button>Find out more</Button>
+          </Link>
+        ) : (
+          <DrawerUiSignUp />
+        )}
       </CardStyles>
     </>
   );

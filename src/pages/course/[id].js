@@ -20,26 +20,24 @@ import PleaseSignIn from "components/CategoryPages/AllCategories/PleaseSignIn";
 export default function SingleCoursePage() {
   return (
     <ThemeProvider theme={theme}>
-      <PleaseSignIn>
-        <Fragment>
-          <ResetCSS />
-          <GlobalStyle />
-          <AppWrapper>
-            <DrawerProvider>
-              <NavBar />
-            </DrawerProvider>
-            <ContentWrapper>
-              <BreadCrumbs
-                childCategory={subCategoryCourse}
-                parentCategory="Design"
-                subParentCategory="Web Design"
-              />
-              <SingleCourse />
-            </ContentWrapper>
-            <Footer />
-          </AppWrapper>
-        </Fragment>
-      </PleaseSignIn>
+      <Fragment>
+        <ResetCSS />
+        <GlobalStyle />
+        <AppWrapper>
+          <DrawerProvider>
+            <NavBar />
+          </DrawerProvider>
+          <ContentWrapper>
+            <BreadCrumbs
+              childCategory={subCategoryCourse}
+              parentCategory="Design"
+              subParentCategory="Web Design"
+            />
+            <SingleCourse />
+          </ContentWrapper>
+          <Footer />
+        </AppWrapper>
+      </Fragment>
     </ThemeProvider>
   );
 }

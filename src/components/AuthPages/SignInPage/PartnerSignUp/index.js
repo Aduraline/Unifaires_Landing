@@ -308,7 +308,7 @@ export default function SignUpForm() {
           </Stack>
         </div>
       </div>
-      <CheckboxMui />
+      <CheckboxMui label="sammsmasmama" />
       <div className="button_wrapper">
         <LoadingButton
           fullWidth

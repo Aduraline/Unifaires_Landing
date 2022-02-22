@@ -8,7 +8,21 @@ import Visibility from "@mui/icons-material/Visibility";
 import { LoadingButton } from "@mui/lab";
 import CheckboxMui from "../CheckBoxMui";
 import Link from "next/link";
-import { Button } from "reactstrap";
+
+import FullScreenDialog from "../CreateAccountModal";
+
+const DrawerUiSignUpStyles = styled.div`
+  .MuiLoadingButton-root {
+    background: #5832da;
+    height: 48px;
+    text-transform: capitalize;
+    border-radius: 6px;
+    font-weight: 600;
+    &:hover {
+      background: #5832da;
+    }
+  }
+`;
 
 const FormMuiStyles = styled.div`
   .Mui-focused.MuiInputLabel-root {
@@ -87,7 +101,7 @@ const MuiLoadingButton = styled(LoadingButton)``;
 // FIXME: Clean up the code!!
 export default function DrawerUiSignUp() {
   const [state, setState] = React.useState({
-    right: true,
+    right: false,
   });
 
   const [showPassword, setShowPassword] = React.useState(false);
@@ -104,21 +118,23 @@ export default function DrawerUiSignUp() {
   };
 
   return (
-    <>
+    <DrawerUiSignUpStyles>
+      <LoadingButton variant="outlined" fullWidth onClick={toggleDrawer(true)}>
+        Find Out More
+      </LoadingButton>
       <StyledDrawer
         anchor={"right"}
         open={state["right"]}
-        // onClose={toggleDrawer(false)}
+        onClose={toggleDrawer(false)}
       >
-        <Link href="/categories">
-          <IconButton
-            aria-label="delete"
-            onClick={toggleDrawer(false)}
-            onKeyDown={toggleDrawer(false)}
-          >
-            <CloseIcon />
-          </IconButton>
-        </Link>
+        <IconButton
+          aria-label="delete"
+          onClick={toggleDrawer(false)}
+          onKeyDown={toggleDrawer(false)}
+        >
+          <CloseIcon />
+        </IconButton>
+
         <h6>
           {" "}
           <span>Sign in</span> to avail exciting Education to your fingertips!
@@ -170,7 +186,7 @@ export default function DrawerUiSignUp() {
               Sign In
             </MuiLoadingButton>
 
-            <MuiLoadingButton
+            {/* <MuiLoadingButton
               className="muiLoading_secondary"
               fullWidth
               size="large"
@@ -179,7 +195,9 @@ export default function DrawerUiSignUp() {
               // loading={isSubmitting}
             >
               Create Account
-            </MuiLoadingButton>
+            </MuiLoadingButton> */}
+
+            <FullScreenDialog />
           </Stack>
         </FormMuiStyles>
 
@@ -190,6 +208,6 @@ export default function DrawerUiSignUp() {
           </Link>
         </p>
       </StyledDrawer>
-    </>
+    </DrawerUiSignUpStyles>
   );
 }
