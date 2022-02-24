@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import dynamic from "next/dynamic";
-const OwlCarousel = dynamic(import("react-owl-carousel3"));
 import Fade from "react-reveal/Fade";
-import JobCard from "../../../common/components/MuiCard";
 import { Heading, HeadingText, Text } from "common/style";
+import { InDemandJobsData } from "common/data/landingPageData";
+import GlideCarousel from "common/components/GlideCarousel";
+import { NextButton, PrevButton } from "./InDemand.styles";
+import GlideSlide from "common/components/GlideCarousel/glideSlide";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import { CardStyles } from "common/components/MuiCard/MuiCard.styles";
 
 const ContainerStyle = styled.div`
   background: white;
@@ -17,6 +26,20 @@ const ContainerStyle = styled.div`
       background: transparent; /* Optional: just make scrollbar invisible */
     }
   }
+
+  .glide__controls {
+    padding: 10px;
+
+    /* @media (max-width: 767px) {
+      top: -60px;
+      left: 0;
+      right: auto;
+    }
+    @media (max-width: 575px) {
+      left: 50%;
+      transform: translateX(-50%);
+    } */
+  }
 `;
 const FlexContainer = styled.div`
   display: flex;
@@ -25,6 +48,24 @@ const FlexContainer = styled.div`
 `;
 
 const ChooseUs = () => {
+  const carouselOptions = {
+    type: "carousel",
+    autoplay: 4000,
+    perView: 3,
+    gap: 30,
+    animationDuration: 800,
+    breakpoints: {
+      990: {
+        perView: 3,
+      },
+      767: {
+        perView: 2,
+      },
+      500: {
+        perView: 1,
+      },
+    },
+  };
   return (
     <ContainerStyle className="container ptb-100">
       <HeadingText>In-Demand Jobs</HeadingText>
@@ -38,66 +79,54 @@ const ChooseUs = () => {
           See all <i class="ri-arrow-right-s-line"></i>
         </Text>
       </FlexContainer>
-      {/* TODO: redo the dammm section */}
-      <div className="in_demand ">
-        <JobCard
-          image="./images/job1.svg"
-          title="Philosophy and Theology"
-          button="Meta"
-          desc=" Philosophy and Theology brings together some of the most
-        important approaches to understanding and assessing the
-        intellectual claims of religion."
-          bg="left"
-          callToAction="Apply Now"
-          stats="42 Applicants"
-        />
+      <GlideCarousel
+        carouselSelector="awards-carousel"
+        options={carouselOptions}
+        prevButton={
+          <PrevButton>
+            <span />
+          </PrevButton>
+        }
+        nextButton={
+          <NextButton>
+            <span />
+          </NextButton>
+        }
+      >
+        {InDemandJobsData.map((item) => (
+          <GlideSlide key={item.id}>
+            <CardStyles>
+              <Card sx={{ width: 400 }} className={item.bg}>
+                <CardMedia
+                  component="img"
+                  alt="green iguana"
+                  image={item.image}
+                />
+                <CardContent>
+                  <Button className="pill-button">{item.button}</Button>
 
-        <JobCard
-          image="./images/job2.svg"
-          title="Data Science for IoT"
-          button="Google"
-          desc=" Philosophy and Theology brings together some of the most
-        important approaches to understanding and assessing the
-        intellectual claims of religion."
-          bg="center"
-          callToAction="Apply Now"
-          stats="4 Applicants"
-        />
+                  <Typography variant="h5" color="text.secondary">
+                    {item.title}
+                  </Typography>
 
-        <JobCard
-          image="./images/cardthree.svg"
-          title="Anthropology in the 21st Century"
-          button="IBM"
-          desc="Examine human-environmental relationships from the
-        anthropological perspective considering theoretical approaches
-        and practical applications will be supplemented."
-          bg="right"
-          callToAction="Apply Now"
-          stats="242 Applicants"
-        />
-        <JobCard
-          image="./images/cardthree.svg"
-          title="Anthropology in the 21st Century"
-          button="IBM"
-          desc="Examine human-environmental relationships from the
-        anthropological perspective considering theoretical approaches
-        and practical applications will be supplemented."
-          bg="right"
-          callToAction="Apply Now"
-          stats="420 Applicants"
-        />
-        <JobCard
-          image="./images/cardthree.svg"
-          title="Anthropology in the 21st Century"
-          button="IBM"
-          desc="Examine human-environmental relationships from the
-        anthropological perspective considering theoretical approaches
-        and practical applications will be supplemented."
-          bg="right"
-          callToAction="Apply Now"
-          stats="402 Applicants"
-        />
-      </div>
+                  <Typography variant="body2" color="text.secondary">
+                    {item.desc}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <div className="left-wrapper">
+                    <p>{item.stats}</p>
+                    <img src="./images/adoptionImage.svg" alt="image" />
+                  </div>
+                  <Button size="small" className="apply-btn default-btn">
+                    {item.callToAction} <i class="ri-arrow-right-s-line"></i>
+                  </Button>
+                </CardActions>
+              </Card>
+            </CardStyles>
+          </GlideSlide>
+        ))}
+      </GlideCarousel>
     </ContainerStyle>
   );
 };

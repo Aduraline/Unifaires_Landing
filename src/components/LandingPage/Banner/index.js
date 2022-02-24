@@ -5,6 +5,31 @@ import Link from "next/link";
 
 const ColoredText = styled.span``;
 
+const BannerStyles = styled.div`
+  height: 1200px;
+  background-image: url("../images/hero.svg");
+  background-position: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 72px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* White */
+
+    color: #ffffff;
+
+    opacity: 0.9;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+`;
+
 const FlexContainer = styled.div`
   display: flex;
   align-items: center;
@@ -45,31 +70,20 @@ const Button = styled.button`
 
 const Banner = () => {
   return (
-    <div className="banner-area-two">
-      <div className="container-fluid">
-        <div className="row align-items-center">
-          <div className="col-lg-12">
-            <div className="banner-content-two">
-              <FlexContainer>
-                <Fade up delay={100}>
-                  <h1>
-                    Find affordable <ColoredText>Learning</ColoredText>{" "}
-                    Resources
-                  </h1>
-                </Fade>
-                <div className="banner-btn">
-                  <Fade left delay={200}>
-                    <Link href="/contact">
-                      <Button>Get in Touch</Button>
-                    </Link>
-                  </Fade>
-                </div>
-              </FlexContainer>
-            </div>
-          </div>
+    <BannerStyles>
+      <FlexContainer>
+        <Fade up delay={100}>
+          <h1>Find affordable Learning Resources</h1>
+        </Fade>
+        <div className="banner-btn">
+          <Fade left delay={200}>
+            <Link href="/contact">
+              <Button>Get in Touch</Button>
+            </Link>
+          </Fade>
         </div>
-      </div>
-    </div>
+      </FlexContainer>
+    </BannerStyles>
   );
 };
 
