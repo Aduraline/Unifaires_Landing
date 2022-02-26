@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import dynamic from "next/dynamic";
 import Fade from "react-reveal/Fade";
@@ -28,17 +28,9 @@ const ContainerStyle = styled.div`
   }
 
   .glide__controls {
+    position: absolute;
     padding: 10px;
-
-    /* @media (max-width: 767px) {
-      top: -60px;
-      left: 0;
-      right: auto;
-    }
-    @media (max-width: 575px) {
-      left: 50%;
-      transform: translateX(-50%);
-    } */
+    right: 0;
   }
 `;
 const FlexContainer = styled.div`
@@ -80,7 +72,7 @@ const ChooseUs = () => {
         </Text>
       </FlexContainer>
       <GlideCarousel
-        carouselSelector="awards-carousel"
+        carouselSelector="inDemandJobs-carousel"
         options={carouselOptions}
         prevButton={
           <PrevButton>

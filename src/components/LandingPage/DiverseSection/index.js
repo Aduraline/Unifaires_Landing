@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
-import DiverseCard from "../../../common/components/MuiCard";
 import { Heading, HeadingText, Text } from "common/style";
 import GlideCarousel from "common/components/GlideCarousel";
 import { InDemandJobsData } from "common/data/landingPageData";
@@ -17,28 +16,11 @@ import { NextButton, PrevButton } from "../InDemandJob/InDemand.styles";
 
 const ContainerStyle = styled.div`
   background: white;
-  .diverse_section {
-    display: flex;
-    gap: 30px;
-    overflow-x: scroll;
-    ::-webkit-scrollbar {
-      width: 100px; /* Remove scrollbar space */
-      background: transparent;
-      /* Optional: just make scrollbar invisible */
-    }
-  }
-  .glide__controls {
-    padding: 10px;
 
-    /* @media (max-width: 767px) {
-      top: -60px;
-      left: 0;
-      right: auto;
-    }
-    @media (max-width: 575px) {
-      left: 50%;
-      transform: translateX(-50%);
-    } */
+  .glide__controls {
+    position: absolute;
+    padding: 10px;
+    right: 0;
   }
 `;
 const FlexContainer = styled.div`
@@ -83,7 +65,7 @@ const DiverseSection = () => {
         </FlexContainer>
       </Fade>
       <GlideCarousel
-        carouselSelector="awards-carousel"
+        carouselSelector="diverseSection-carousel"
         options={carouselOptions}
         prevButton={
           <PrevButton>

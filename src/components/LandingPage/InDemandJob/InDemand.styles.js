@@ -2,20 +2,20 @@ import styled from "styled-components";
 
 export const PrevButton = styled.div`
   position: relative;
-  padding: 18px 10px;
+  padding: 20px 12px;
   cursor: pointer;
   &:hover {
     span {
-      background: #3444f1;
+      background: #5832da;
       @media (min-width: 991px) {
-        width: 100px;
+        width: 120px;
       }
     }
   }
   span {
-    width: 18px;
+    width: 30px;
     height: 2px;
-    background: #d1d3de;
+    background: #5832da;
     display: block;
     position: relative;
     transition: 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
@@ -45,20 +45,20 @@ export const PrevButton = styled.div`
 
 export const NextButton = styled.div`
   position: relative;
-  padding: 18px 10px;
+  padding: 20px 12px;
   cursor: pointer;
   &:hover {
     span {
-      background: #3444f1;
+      background: #5832da;
       @media (min-width: 991px) {
-        width: 100px;
+        width: 120px;
       }
     }
   }
   span {
-    width: 18px;
+    width: 30px;
     height: 2px;
-    background: #d1d3de;
+    background: #5832da;
     display: block;
     position: relative;
     transition: 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);

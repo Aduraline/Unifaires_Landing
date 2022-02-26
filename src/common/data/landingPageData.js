@@ -1,13 +1,23 @@
 export const InDemandJobsData = [
   {
     image: "./images/job1.svg",
-    title: "Philosophy and Theology",
+    title: "Philosophy and Theology lll",
     button: "Meta",
     desc: "Philosophy and Theology brings together some of the most important approaches to understanding and assessing the intellectual claims of religion.",
     bg: "left",
     callToAction: "Apply Now",
     stats: "42 Applicants",
     id: 1,
+  },
+  {
+    image: "./images/job1.svg",
+    title: "Philosophy and Theology lll",
+    button: "Meta",
+    desc: "Philosophy and Theology brings together some of the most important approaches to understanding and assessing the intellectual claims of religion.",
+    bg: "left",
+    callToAction: "Apply Now",
+    stats: "42 Applicants",
+    id: 1222,
   },
   {
     image: "./images/job2.svg",
