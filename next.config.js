@@ -1,9 +1,9 @@
-const withPlugins = require('next-compose-plugins');
+const withPlugins = require("next-compose-plugins");
 
 const nextConfig = {
   // distDir: '../../dist/functions/next'
   images: {
-    domains: ['pbs.twimg.com'],
+    domains: ["pbs.twimg.com"],
   },
 };
 

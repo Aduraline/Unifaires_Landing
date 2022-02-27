@@ -1,6 +1,8 @@
 import { Modal } from "@redq/reuse-modal";
+import { wrapper } from "../store";
 import NProgress from "nprogress";
 import Router from "next/router";
+
 import "@redq/reuse-modal/es/index.css";
 import "common/assets/css/flaticon.css";
 import "../public/fonts/remixicon.css";
@@ -21,10 +23,12 @@ Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
 
-export default function CustomApp({ Component, pageProps }) {
+const CustomApp = ({ Component, pageProps }) => {
   return (
     <Modal>
       <Component {...pageProps} />
     </Modal>
   );
-}
+};
+
+export default wrapper.withRedux(CustomApp);

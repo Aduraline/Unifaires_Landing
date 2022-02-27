@@ -7,24 +7,25 @@ import Fade from "react-reveal/Fade";
 import GlobalStyle, {
   AppWrapper,
   ContentWrapper,
-} from "components/Categories/CategoriesStyles";
-// FIXME: Find a way to import this correctly
-import CategoryDropDown from "components/Categories/CategoryDropDown/index.";
-import Statistics from "components/Categories/Statistics";
-import BreadCrumbs from "components/Categories/BreadCrumbs";
-import Jobs from "components/Categories/Jobs";
+} from "components/CategoryPages/CategoriesStyles";
+
+import Statistics from "components/CategoryPages/AllCategories/Statistics";
+import Jobs from "components/CategoryPages/AllCategories/Jobs";
 import { DrawerProvider } from "common/contexts/DrawerContext";
-import NavBar from "components/LandingPage/NavBar";
+import NavBar from "common/components/NavBar";
 import Footer from "components/LandingPage/Footer";
-import DegreeCourse from "components/Categories/DegreeCourse";
-import Funding from "components/Categories/Funding";
+import Funding from "components/CategoryPages/AllCategories/Funding";
+import { subCategories } from "common/data/categoryData";
+import CategoryDropDown from "components/CategoryPages/AllCategories/CategoryDropDown/index.";
+import BreadCrumbs from "common/components/BreadCrumbs";
+import DegreeCourse from "components/CategoryPages/AllCategories/DegreeCourse";
 
 export default function CategoriesPage() {
   return (
     <ThemeProvider theme={theme}>
       <Fragment>
         <Head>
-          <title>UNIFAIRES| Categories</title>
+          <title>UNIFAIRES| All Categories</title>
           <meta
             name="Description"
             content="Future-proof learning with career opportunities"
@@ -55,11 +56,14 @@ export default function CategoriesPage() {
             <NavBar />
           </DrawerProvider>
           <ContentWrapper>
-            <BreadCrumbs />
+            <BreadCrumbs
+              childCategory={subCategories}
+              parentCategory="Design"
+            />
             <CategoryDropDown />
-            <Fade left delay={100}>
-              <Statistics />
-            </Fade>
+
+            <Statistics />
+
             <Jobs />
             <DegreeCourse />
             <Funding />

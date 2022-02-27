@@ -17,6 +17,7 @@ export const Heading = styled.p`
   display: flex;
   align-items: center;
   color: #000000;
+
   @media screen and (max-width: 480px) {
     font-size: 14px;
   }
@@ -28,6 +29,7 @@ export const Text = styled.p`
   align-items: center;
   color: #c07654;
   opacity: 0.9;
+
   @media screen and (max-width: 768px) {
     display: none;
   }
