@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SingleCourseStyles = styled.div`
+export const SingleJobStyles = styled.div`
   section {
     background: #f3f5f7;
     border-radius: 32px;

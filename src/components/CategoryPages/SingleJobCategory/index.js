@@ -5,9 +5,9 @@ import SecondaryChips from "common/components/SecondaryChip";
 import FilterCard from "../../../common/components/FilterCard";
 import DegreeCard from "../../../common/components/DegreeCard";
 import JobCard from "../../../common/components/JobCard";
-import { SingleJobStyles } from "./SingleJob.Style";
 import ListUi from "common/components/ListUi";
 import { courseList } from "common/data/categoryData";
+import { SingleJobStyles } from "./SingleJob.Style";
 
 // make reusable component for this and super dry
 

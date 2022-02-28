@@ -7,9 +7,9 @@ import SecondaryChips from "common/components/SecondaryChip";
 import FilterCard from "../../../common/components/FilterCard";
 import DegreeCard from "../../../common/components/DegreeCard";
 import JobCard from "../../../common/components/JobCard";
-import { SingleCourseStyles } from "./SingleCourse.Styles";
 import ListUi from "common/components/ListUi";
 import { courseList } from "common/data/categoryData";
+import { SingleCourseStyles } from "./SingleCourse.Styles";
 
 export default function SingleCourse() {
   return (
