@@ -52,12 +52,12 @@ const UncontrolledButtonDropdown = styled(UIDrop)`
   }
 `;
 
-export default function FilterDropdown({ title }) {
+export default function FilterDropdown({ dropDown }) {
   return (
     <div>
       <UncontrolledButtonDropdown>
         <DropdownToggle caret>
-          Frontend Web Developer <i class="ri-arrow-down-s-line"></i>
+          {dropDown} <i class="ri-arrow-down-s-line"></i>
         </DropdownToggle>
         <DropdownMenu>
           {/* TODO: Loop through the list items and display each option */}

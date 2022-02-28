@@ -33,3 +33,13 @@ export const AccordionData = [
     id: "3",
   },
 ];
+
+export const courseList = [
+  "What you’ll learn: Design responsive and accessible experiences that work across multiple platforms",
+  "Become an authority on our visual design language, extending upon our existing systems—such as our color system, navigation components, and interaction patterns.",
+  "Provide regular design feedback and direction to your coworkers.",
+  "Provide regular design feedback and direction to your coworkers.",
+  " Provide regular design feedback and direction to your coworkers.",
+  "Seek out opportunities for connecting with people and teams working on related projects.",
+  "Build meaningful relationships across the product, engineering, and other cross-functional partners you're working with.",
+];

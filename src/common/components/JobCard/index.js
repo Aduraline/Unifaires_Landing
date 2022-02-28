@@ -1,6 +1,7 @@
 import NextImage from "common/components/NextImage";
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
 // icon
 import Microsoft from "../../../../public/images/ms.svg";
 
@@ -104,7 +105,9 @@ export default function Card() {
           </p>
         </div>
         <div className="card__footer">
-          <button className="default-btn">Apply Now</button>
+          <Link href="/job/3u8458839">
+            <button className="default-btn">Apply Now</button>
+          </Link>
           <button className="full">Shortlist</button>
         </div>
       </div>
