@@ -117,7 +117,7 @@ const CardStyles = styled.div`
 export default function DegreeCard() {
   // Sign In logics
 
-  const isSignIn = false;
+  const isSignIn = true;
   return (
     <>
       <CardStyles>
