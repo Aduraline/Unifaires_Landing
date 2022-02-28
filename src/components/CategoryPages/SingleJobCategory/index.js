@@ -5,7 +5,7 @@ import SecondaryChips from "common/components/SecondaryChip";
 import FilterCard from "../../../common/components/FilterCard";
 import DegreeCard from "../../../common/components/DegreeCard";
 import JobCard from "../../../common/components/JobCard";
-import { SingleCourseStyles } from "./SingleJob.Style";
+import { SingleJobStyles } from "./SingleJob.Style";
 import ListUi from "common/components/ListUi";
 import { courseList } from "common/data/categoryData";
 
@@ -13,7 +13,7 @@ import { courseList } from "common/data/categoryData";
 
 export default function SingleCourse() {
   return (
-    <SingleCourseStyles className="container">
+    <SingleJobStyles className="container">
       <section>
         <div className="title-wrapper">
           <div className="brand-section">
@@ -167,6 +167,6 @@ export default function SingleCourse() {
           <JobCard />
         </div>
       </div>
-    </SingleCourseStyles>
+    </SingleJobStyles>
   );
 }

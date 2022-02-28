@@ -7,11 +7,11 @@ import SecondaryChips from "common/components/SecondaryChip";
 import FilterCard from "../../../common/components/FilterCard";
 import DegreeCard from "../../../common/components/DegreeCard";
 import JobCard from "../../../common/components/JobCard";
-import { SingleJobStyles } from "./SingleCourse.Styles";
+import { SingleCourseStyles } from "./SingleCourse.Styles";
 
 export default function SingleCourse() {
   return (
-    <SingleJobStyles className="container">
+    <SingleCourseStyles className="container">
       <Head>
         <title>Unifaires| Course name </title>
       </Head>
@@ -107,6 +107,6 @@ export default function SingleCourse() {
           <JobCard />
         </div>
       </div>
-    </SingleJobStyles>
+    </SingleCourseStyles>
   );
 }
