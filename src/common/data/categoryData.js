@@ -42,4 +42,7 @@ export const courseList = [
   " Provide regular design feedback and direction to your coworkers.",
   "Seek out opportunities for connecting with people and teams working on related projects.",
   "Build meaningful relationships across the product, engineering, and other cross-functional partners you're working with.",
+  
 ];
+
+

@@ -8,6 +8,7 @@ import JobCard from "../../../common/components/JobCard";
 import ListUi from "common/components/ListUi";
 import { courseList } from "common/data/categoryData";
 import { SingleJobStyles } from "./SingleJob.Style";
+import SignInModal from "common/components/SignInModal";
 
 // make reusable component for this and super dry
 
@@ -23,7 +24,7 @@ export default function SingleCourse() {
 
           <div className="call-to-action">
             <button className="secondary-button">Save For Later</button>
-            <button className="default-btn">Apply Now</button>
+            <SignInModal />
           </div>
         </div>
 
