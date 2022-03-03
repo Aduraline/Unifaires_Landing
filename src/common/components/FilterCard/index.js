@@ -11,7 +11,6 @@ const FilterCardStyles = styled.div`
   .MuiCard-root {
     background: #ffffff;
     border-radius: 32px;
-    height: 724px;
     padding: 32px;
     box-shadow: none;
 
@@ -36,7 +35,6 @@ const FilterCardStyles = styled.div`
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 14px;
-      margin-bottom: 48px;
 
       .skill {
         background: #5832da;
@@ -46,7 +44,6 @@ const FilterCardStyles = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
-
         h6 {
           font-weight: bold;
           font-size: 14px;
@@ -128,17 +125,15 @@ const FilterCardStyles = styled.div`
   }
 `;
 
-export default function FilterCard() {
+export default function FilterCard({ title, dropDown }) {
   return (
     <FilterCardStyles>
       <Card sx={{ width: 504 }}>
         <CardContent>
-          <Typography variant="h5">
-            Match this study area with a Job title
-          </Typography>
+          <Typography variant="h5">{title}</Typography>
           <div className="dropdown">
             {/* TODO: fix the issue with flex & width somehow */}
-            <FilterDropdown />
+            <FilterDropdown dropDown={dropDown} />
           </div>
 
           <Typography variant="h6">Skills this study program offers</Typography>

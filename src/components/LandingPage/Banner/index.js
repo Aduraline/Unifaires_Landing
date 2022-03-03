@@ -6,7 +6,7 @@ import Link from "next/link";
 const ColoredText = styled.span``;
 
 const BannerStyles = styled.div`
-  height: 1200px;
+  height: 100vh;
   background-image: url("../images/hero.svg");
   background-position: contain;
   display: flex;

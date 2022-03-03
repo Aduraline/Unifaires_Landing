@@ -7,8 +7,9 @@ import SecondaryChips from "common/components/SecondaryChip";
 import FilterCard from "../../../common/components/FilterCard";
 import DegreeCard from "../../../common/components/DegreeCard";
 import JobCard from "../../../common/components/JobCard";
+import ListUi from "common/components/ListUi";
+import { courseList } from "common/data/categoryData";
 import { SingleCourseStyles } from "./SingleCourse.Styles";
-import SignInModal from "common/components/SignInModal";
 
 export default function SingleCourse() {
   return (
@@ -48,36 +49,8 @@ export default function SingleCourse() {
                 skill, achievement, and contribution. Earn and share your badge
                 today!
               </p>
-              <span>What you’ll learn:</span>
-              <ul>
-                <li>
-                  <span>•</span>
-                  What you’ll learn: Design responsive and accessible
-                  experiences that work across multiple platforms.
-                </li>
-                <li>
-                  <span>•</span>
-                  Become an authority on our visual design language, extending
-                  upon our existing systems—such as our color system, navigation
-                  components, and interaction patterns.
-                </li>
-                <li>
-                  <span>•</span>
-                  Provide regular design feedback and direction to your
-                  coworkers.
-                </li>
-                <li>
-                  <span>•</span>
-                  Seek out opportunities for connecting with people and teams
-                  working on related projects.
-                </li>
-                <li>
-                  <span>•</span>
-                  Build meaningful relationships across the product,
-                  engineering, and other cross-functional partners you're
-                  working with.
-                </li>
-              </ul>
+
+              <ListUi points={courseList} title="What you’ll learn:" />
             </div>
             <div className="accordion__header">
               <h5>LESSONS</h5>
@@ -98,7 +71,10 @@ export default function SingleCourse() {
           </div>
 
           <div className="right-section">
-            <FilterCard />
+            <FilterCard
+              title="Match this course skills with a job role"
+              dropDown="Web 2.0 Front-End Developer"
+            />
           </div>
         </div>
       </section>
